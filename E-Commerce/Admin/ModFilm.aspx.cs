@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -48,47 +49,10 @@ namespace E_Commerce.Admin
                 Img3Upload.SaveAs(Server.MapPath($"/Content/img/{Img3Upload.FileName}"));
             }
 
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
-            SqlConnection conn = new SqlConnection(connectionString);
 
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO Films VALUES(@Title, @Production, @Category, @Year, @Duration, @FirstActor, @Price, @BackgroundImg, @CoverImg, @Img1, @Img2, @Img3, @Director, @Rating)";
-                cmd.Parameters.AddWithValue("Title", TitleBox.Text);
-                cmd.Parameters.AddWithValue("Production", ProductionBox.Text);
-                cmd.Parameters.AddWithValue("Category", CategoryBox.Text);
-                cmd.Parameters.AddWithValue("Year", YearBox.Text);
-                cmd.Parameters.AddWithValue("Duration", DurationBox.Text);
-                cmd.Parameters.AddWithValue("FirstActor", FirstActorBox.Text);
-                cmd.Parameters.AddWithValue("Price", Convert.ToDouble(PriceBox.Text));
-                cmd.Parameters.AddWithValue("BackgroundImg", fileNameBg);
-                cmd.Parameters.AddWithValue("CoverImg", fileNameCover);
-                cmd.Parameters.AddWithValue("Img1", fileNameImg1);
-                cmd.Parameters.AddWithValue("Img2", fileNameImg2);
-                cmd.Parameters.AddWithValue("Img3", fileNameImg3);
-                cmd.Parameters.AddWithValue("Director", DirectorBox.Text);
-                cmd.Parameters.AddWithValue("Rating", Convert.ToDouble(RatingBox.Text));
+            Database.Insert(TitleBox.Text,ProductionBox.Text, CategoryBox.Text, YearBox.Text, DurationBox.Text, FirstActorBox.Text, Convert.ToDouble(PriceBox.Text), fileNameBg, fileNameCover, fileNameImg1, fileNameImg2, fileNameImg3, DirectorBox.Text, Convert.ToDouble(RatingBox.Text));
 
-
-                int IsOk = cmd.ExecuteNonQuery();
-
-                if (IsOk > 0)
-                {
-                    Response.Redirect("../Default.aspx");
-                }
-            }
-
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-            }
+            Response.Redirect("../Default.aspx");
         }
     }
 }
