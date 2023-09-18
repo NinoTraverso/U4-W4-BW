@@ -48,7 +48,7 @@ namespace E_Commerce.Admin
                 Img3Upload.SaveAs(Server.MapPath($"/Content/img/{Img3Upload.FileName}"));
             }
 
-            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
+            string connectionString = ConfigurationManager.ConnectionStrings["U4BW"].ConnectionString.ToString();
             SqlConnection conn = new SqlConnection(connectionString);
 
             try
