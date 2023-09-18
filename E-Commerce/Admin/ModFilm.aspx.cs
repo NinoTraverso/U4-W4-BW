@@ -21,31 +21,31 @@ namespace E_Commerce.Admin
             if (BackgroundUpload.HasFile)
             {
                 fileNameBg = BackgroundUpload.FileName;
-                BackgroundUpload.SaveAs(Server.MapPath($"/Content/img/{BackgroundUpload.FileName}"));
+                BackgroundUpload.SaveAs(Server.MapPath($"/Content/assets/{BackgroundUpload.FileName}"));
             }
             string fileNameCover = "";
             if (CoverImgUpload.HasFile)
             {
                 fileNameCover = CoverImgUpload.FileName;
-                CoverImgUpload.SaveAs(Server.MapPath($"/Content/img/{CoverImgUpload.FileName}"));
+                CoverImgUpload.SaveAs(Server.MapPath($"/Content/assets/{CoverImgUpload.FileName}"));
             }
             string fileNameImg1 = "";
             if (Img1Upload.HasFile)
             {
                 fileNameImg1 = Img1Upload.FileName;
-                Img1Upload.SaveAs(Server.MapPath($"/Content/img/{Img1Upload.FileName}"));
+                Img1Upload.SaveAs(Server.MapPath($"/Content/assets/{Img1Upload.FileName}"));
             }
             string fileNameImg2 = "";
             if (Img2Upload.HasFile)
             {
                 fileNameImg2 = Img2Upload.FileName;
-                Img2Upload.SaveAs(Server.MapPath($"/Content/img/{Img2Upload.FileName}"));
+                Img2Upload.SaveAs(Server.MapPath($"/Content/assets/{Img2Upload.FileName}"));
             }
             string fileNameImg3 = "";
             if (Img3Upload.HasFile)
             {
                 fileNameImg3 = Img3Upload.FileName;
-                Img3Upload.SaveAs(Server.MapPath($"/Content/img/{Img3Upload.FileName}"));
+                Img3Upload.SaveAs(Server.MapPath($"/Content/assets/{Img3Upload.FileName}"));
             }
 
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
@@ -82,7 +82,7 @@ namespace E_Commerce.Admin
                 }
             }
 
-            catch (Exception ex)
+            catch
             {
 
             }

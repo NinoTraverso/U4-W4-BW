@@ -39,7 +39,7 @@
             </div>
         </header>
         <div class="spacer"></div>
-        <div class="content-container">
+        <div class="content-container mb-5">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

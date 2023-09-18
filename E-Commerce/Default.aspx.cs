@@ -12,13 +12,12 @@ namespace E_Commerce
 {
     public partial class Home : System.Web.UI.Page
     {
-        public readonly List<Film> Films = new List<Film>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
 
-                string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
+                string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
                 SqlConnection conn = new SqlConnection(connectionString);
 
                 SqlCommand cmd = new SqlCommand("select * from Films", conn);
@@ -26,11 +25,12 @@ namespace E_Commerce
 
                 conn.Open();
 
-
+                List<Film> films = new List<Film>();
                 sqlDataReader = cmd.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
                     Film film = new Film();
+                    film.Id = Convert.ToInt32(sqlDataReader["IdFilm"]);
                     film.Title = sqlDataReader["Title"].ToString();
                     film.Director = sqlDataReader["Director"].ToString();
                     film.Price = Convert.ToDouble(sqlDataReader["Price"]);
@@ -45,8 +45,12 @@ namespace E_Commerce
                     film.Img1 = sqlDataReader["Img1"].ToString();
                     film.Img2 = sqlDataReader["Img2"].ToString();
                     film.Img3 = sqlDataReader["Img3"].ToString();
-
+                    films.Add(film);
                 }
+
+                Repeater1.DataSource = films;
+                Repeater1.DataBind();
+
                 conn.Close();
 
             }
