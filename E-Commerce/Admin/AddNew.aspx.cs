@@ -9,12 +9,13 @@ using System.Web.UI.WebControls;
 
 namespace E_Commerce.Admin
 {
-    public partial class ModFilm : System.Web.UI.Page
+    public partial class AddNew : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
         protected void InsertButton_Click(object sender, EventArgs e)
         {
             string fileNameBg = "";
@@ -48,7 +49,7 @@ namespace E_Commerce.Admin
                 Img3Upload.SaveAs(Server.MapPath($"/Content/img/{Img3Upload.FileName}"));
             }
 
-            string connectionString = ConfigurationManager.ConnectionStrings["U4BW"].ConnectionString.ToString();
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
             SqlConnection conn = new SqlConnection(connectionString);
 
             try
@@ -77,7 +78,7 @@ namespace E_Commerce.Admin
 
                 if (IsOk > 0)
                 {
-                    Response.Redirect("../Default.aspx");
+                    Response.Redirect("Default");
                 }
             }
 
