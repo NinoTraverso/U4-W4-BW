@@ -6,9 +6,20 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
+
+
     </asp:ContentPlaceHolder>
+
+    <div class="py-4 bg-success opacity-75">
+        <a href="Home.aspx" class="text-decoration-none text-light">Home</a>
+        <a class="text-decoration-none text-light">Carrello</a>
+        <a class="text-decoration-none text-light">Log In</a>
+    </div>
+
 </head>
+
 <body>
     <form id="form1" runat="server">
         <div>
