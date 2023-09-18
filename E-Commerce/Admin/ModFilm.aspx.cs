@@ -77,7 +77,7 @@ namespace E_Commerce.Admin
 
                 if (IsOk > 0)
                 {
-                    Response.Redirect("Default");
+                    Response.Redirect("../Default.aspx");
                 }
             }
 
