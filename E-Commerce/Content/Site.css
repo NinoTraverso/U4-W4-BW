@@ -19,3 +19,40 @@ textarea {
         padding: 0;
     }
 }
+
+header {
+    z-index:1;
+}
+
+.content-container {
+    padding-top:10%;
+}
+
+#preview-overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.3);
+    width:100%;
+    height:100%;
+}
+
+#preview-details {
+    position:absolute;
+    top:250px;
+}
+
+#preview-details button {
+    background-color:rgba(50,50,50,0.4);
+    border:none;
+    border-radius: 5px;
+}
+
+#preview-details button:hover{
+    color:white;
+    background:black;
+}
+
+body::-webkit-scrollbar {
+    display:none;
+}

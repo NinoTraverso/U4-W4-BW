@@ -51,5 +51,17 @@ namespace E_Commerce
 
             }
         }
+
+        public void muteVideo()
+        {
+            if (video.Attributes["muted"] == null)
+            {
+                video.Attributes.Add("muted", "true");
+            }
+            else
+            {
+                video.Attributes.Remove("muted");
+            }
+        }
     }
 }

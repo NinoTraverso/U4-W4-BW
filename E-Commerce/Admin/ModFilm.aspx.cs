@@ -48,12 +48,13 @@ namespace E_Commerce.Admin
                 Img3Upload.SaveAs(Server.MapPath($"/Content/img/{Img3Upload.FileName}"));
             }
 
-            string connectionString = ConfigurationManager.ConnectionStrings["U4BW"].ConnectionString.ToString();
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
 
             try
             {
                 conn.Open();
+               
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = "INSERT INTO Films VALUES(@Title, @Production, @Category, @Year, @Duration, @FirstActor, @Price, @BackgroundImg, @CoverImg, @Img1, @Img2, @Img3, @Director, @Rating)";
