@@ -11,26 +11,26 @@ namespace E_Commerce
 {
 
 
-    public partial class Site1
+    public partial class Login
     {
 
         /// <summary>
-        /// Controllo head.
+        /// Controllo username.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
-        /// Controllo form1.
+        /// Controllo password.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
         /// Controllo loginButton.
@@ -42,12 +42,12 @@ namespace E_Commerce
         protected global::System.Web.UI.WebControls.Button loginButton;
 
         /// <summary>
-        /// Controllo ContentPlaceHolder1.
+        /// Controllo errorMessage.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorMessage;
     }
 }
