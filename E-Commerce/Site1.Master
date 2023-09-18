@@ -25,11 +25,7 @@
 
 <body>
     <form id="form1" runat="server">
-        <div class="py-4 bg-success opacity-75">
-            <a href="Home.aspx" class="text-decoration-none text-light">Home</a>
-            <a class="text-decoration-none text-light">Carrello</a>
-            <a class="text-decoration-none text-light">Log In</a>
-        </div>
+        
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
