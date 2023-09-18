@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <p>Home</p>
+    <video autoplay muted>
+        <source src="Content/assets/interstellar.mp4"/>
+    </video>
 
 </asp:Content>

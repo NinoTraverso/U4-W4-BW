@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="Admin\List.aspx" />
     <Content Include="Admin\ModFilm.aspx" />
+    <Content Include="Content\assets\interstellar.mp4" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
