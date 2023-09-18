@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,16 @@ namespace E_Commerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                int id = Convert.ToInt32(Request.QueryString["idFilm"]);
+                Film film = DB.getFilmById(id);
+                
+                    title.Text = film.Title;
+                    backgroundImage.ImageUrl = $"Content/assets/{film.BackgroundImg}";
+                
 
+            }
         }
     }
 }

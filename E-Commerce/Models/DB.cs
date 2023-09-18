@@ -45,5 +45,79 @@ namespace E_Commerce.Models
             conn.Close();
             return films;
         }
+
+        public static Film getFilmById(int id)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand("select * from Films where idFilm = @id", conn);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataReader sqlDataReader;
+
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+
+            Film film = new Film();
+            while (sqlDataReader.Read())
+            {
+                film.Id = Convert.ToInt32(sqlDataReader["IdFilm"]);
+                film.Title = sqlDataReader["Title"].ToString();
+                film.Director = sqlDataReader["Director"].ToString();
+                film.Price = Convert.ToDouble(sqlDataReader["Price"]);
+                film.Category = sqlDataReader["Category"].ToString();
+                film.Duration = sqlDataReader["Duration"].ToString();
+                film.Production = sqlDataReader["Production"].ToString();
+                film.FirstActor = sqlDataReader["FirstActor"].ToString();
+                film.Year = sqlDataReader["Year"].ToString();
+                film.Rating = Convert.ToDouble(sqlDataReader["Rating"]);
+                film.BackgroundImg = sqlDataReader["BackgroundImg"].ToString();
+                film.CoverImg = sqlDataReader["CoverImg"].ToString();
+                film.Img1 = sqlDataReader["Img1"].ToString();
+                film.Img2 = sqlDataReader["Img2"].ToString();
+                film.Img3 = sqlDataReader["Img3"].ToString();
+            }
+
+            conn.Close();
+            return film;
+        }
+
+        public static List<Film> getFilmsByCategory(string cat)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand("select * from Films where Category = @cat", conn);
+            cmd.Parameters.AddWithValue("cat", cat);
+            SqlDataReader sqlDataReader;
+
+            conn.Open();
+
+            List<Film> films = new List<Film>();
+            sqlDataReader = cmd.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                Film film = new Film();
+                film.Id = Convert.ToInt32(sqlDataReader["IdFilm"]);
+                film.Title = sqlDataReader["Title"].ToString();
+                film.Director = sqlDataReader["Director"].ToString();
+                film.Price = Convert.ToDouble(sqlDataReader["Price"]);
+                film.Category = sqlDataReader["Category"].ToString();
+                film.Duration = sqlDataReader["Duration"].ToString();
+                film.Production = sqlDataReader["Production"].ToString();
+                film.FirstActor = sqlDataReader["FirstActor"].ToString();
+                film.Year = sqlDataReader["Year"].ToString();
+                film.Rating = Convert.ToDouble(sqlDataReader["Rating"]);
+                film.BackgroundImg = sqlDataReader["BackgroundImg"].ToString();
+                film.CoverImg = sqlDataReader["CoverImg"].ToString();
+                film.Img1 = sqlDataReader["Img1"].ToString();
+                film.Img2 = sqlDataReader["Img2"].ToString();
+                film.Img3 = sqlDataReader["Img3"].ToString();
+                films.Add(film);
+            }
+
+            conn.Close();
+            return films;
+        }
     }
 }
