@@ -14,7 +14,21 @@ namespace E_Commerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Request.QueryString["IdFilm"] != null)
+            {
+                int id = Convert.ToInt32(Request.QueryString["IdFilm"].ToString());
+                Film film = Database.GetById(id);
+                TitleBox.Text = film.Title;
+                DirectorBox.Text = film.Director;
+                PriceBox.Text = film.Price.ToString();
+                CategoryBox.Text = film.Category;
+                DurationBox.Text = film.Duration;
+                ProductionBox.Text = film.Production;
+                FirstActorBox.Text = film.FirstActor;
+                YearBox.Text = film.Year;
+                string rating = film.Rating.ToString();
+                RatingBox.Text = rating;
+            }
         }
         protected void InsertButton_Click(object sender, EventArgs e)
         {

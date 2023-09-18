@@ -104,8 +104,6 @@ namespace E_Commerce.Models
                 cmd.Parameters.AddWithValue("Img3", fileNameImg3);
                 cmd.Parameters.AddWithValue("Director", director);
                 cmd.Parameters.AddWithValue("Rating", Convert.ToDouble(rating));
-
-
                 int IsOk = cmd.ExecuteNonQuery();
 
             }
@@ -118,6 +116,37 @@ namespace E_Commerce.Models
             {
                 conn.Close();
             }
+        }
+        public static void Modify(int id, string title, string production, string category, string year, string duration, string firstActor,
+          double price, string fileNameBg, string fileNameCover, string fileNameImg1, string fileNameImg2, string fileNameImg3, string director, double rating)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "update Films SET Title=@title, Production=@production, Category=@category, Year=@year, Duration=@duration, FirstActor=@firstActor, Price=@price," +
+                "BackgroundImage=@fileNameBg CoverImg=@fileNameCover Img1=@fileNameImg1 Img2=@fileNameImg2 Img3=@fileNameImg3 Director=@director Rating=@rating  where IdFilm=@id";
+            cmd.Parameters.AddWithValue("title", title);
+            cmd.Parameters.AddWithValue("production", production);
+            cmd.Parameters.AddWithValue("category", category);
+            cmd.Parameters.AddWithValue("year", year);
+            cmd.Parameters.AddWithValue("duration", duration);
+            cmd.Parameters.AddWithValue("firstActor", firstActor);
+            cmd.Parameters.AddWithValue("price", price);
+            cmd.Parameters.AddWithValue("fileNameBg", fileNameBg);
+            cmd.Parameters.AddWithValue("fileNameCover", fileNameCover);
+            cmd.Parameters.AddWithValue("fileNameImg1", fileNameImg1);
+            cmd.Parameters.AddWithValue("fileNameImg2", fileNameImg2);
+            cmd.Parameters.AddWithValue("fileNameImg3", fileNameImg3);
+            cmd.Parameters.AddWithValue("director", director);
+            cmd.Parameters.AddWithValue("rating", rating);
+            cmd.Parameters.AddWithValue("IdFilm", id);
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }
