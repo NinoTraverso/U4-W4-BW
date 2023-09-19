@@ -16,8 +16,31 @@ namespace E_Commerce
         {
             if (!IsPostBack)
             { 
-                Repeater1.DataSource = DB.getAllFilm();
-                Repeater1.DataBind();
+                List<Film> actionFilms = new List<Film>();
+                actionFilms = DB.getFilmsByCategory("Azione");
+                RepeaterAzione.DataSource = actionFilms;
+                RepeaterAzione.DataBind();
+
+                List<Film> fantascienzaFilms = new List<Film>();
+                fantascienzaFilms = DB.getFilmsByCategory("Fantascienza");
+                RepeaterFantascienza.DataSource = fantascienzaFilms;
+                RepeaterFantascienza.DataBind();
+
+                List<Film> horrorFilms = new List<Film>();
+                horrorFilms = DB.getFilmsByCategory("Horror");
+                RepeaterHorror.DataSource = horrorFilms;
+                RepeaterHorror.DataBind();
+
+                List<Film> fantasyFilms = new List<Film>();
+                fantasyFilms = DB.getFilmsByCategory("Fantasy");
+                RepeaterFantasy.DataSource = fantasyFilms;
+                RepeaterFantasy.DataBind();
+
+                List<Film> commediaFilms = new List<Film>();
+                commediaFilms = DB.getFilmsByCategory("Commedia");
+                RepeaterCommedia.DataSource = commediaFilms;
+                RepeaterCommedia.DataBind();
+
 
             }
         }

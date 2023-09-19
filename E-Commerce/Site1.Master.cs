@@ -20,31 +20,9 @@ namespace E_Commerce
             Response.Redirect(FormsAuthentication.LoginUrl);
         }
 
-        protected void linkButtonAzione_Click(object sender, EventArgs e)
+        protected void premium_Click(object sender, EventArgs e)
         {
-            Response.Redirect(FormsAuthentication.LoginUrl);
+            Response.Redirect("Premium.aspx");
         }
-
-        protected void linkButtonFantascienza_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(FormsAuthentication.LoginUrl);
-        }
-
-        protected void linkButtonHorror_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(FormsAuthentication.LoginUrl);
-        }
-
-        protected void linkButtonFantasy_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(FormsAuthentication.LoginUrl);
-        }
-
-        protected void linkButtonCommedia_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(FormsAuthentication.LoginUrl);
-        }
-
-
     }
 }
