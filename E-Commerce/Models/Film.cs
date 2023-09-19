@@ -8,6 +8,7 @@ namespace E_Commerce.Models
 {
     public class Film
     {
+        public int Id;
         public string Title { get; set; }
         public string Production { get; set; }
         public string Category { get; set; }
