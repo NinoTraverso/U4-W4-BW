@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -23,6 +24,16 @@ namespace E_Commerce
         protected void premium_Click(object sender, EventArgs e)
         {
             Response.Redirect("Premium.aspx");
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/List.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/ModFilm.aspx");
         }
     }
 }
