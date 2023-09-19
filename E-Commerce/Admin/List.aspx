@@ -13,7 +13,7 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-2">
-                                    <img src="<%# Item.CoverImg %>" alt="cover" />
+                                    <img src="../Content/assets/<%# Item.CoverImg %>" class="w-100" alt="cover" />
                                 </div>
                                 <div class="col-10 d-flex">
                                     <div class="card-body bg-dark text-light d-flex gap-3 align-items-center justify-content-between">
