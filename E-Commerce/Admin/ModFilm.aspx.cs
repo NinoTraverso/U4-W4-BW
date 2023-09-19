@@ -14,6 +14,7 @@ namespace E_Commerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            alert.Visible = false;
             if (Request.QueryString["id"] != null)
             {
                 InsertButton.Visible = false;
@@ -107,6 +108,7 @@ namespace E_Commerce.Admin
             int id= Convert.ToInt32(Request.QueryString["id"]);
             DB.Modify(id,TitleBox.Text, ProductionBox.Text, CategoryBox.Text, YearBox.Text, DurationBox.Text, FirstActorBox.Text, Convert.ToDouble(PriceBox.Text), fileNameBg, fileNameCover, fileNameImg1, fileNameImg2, fileNameImg3, DirectorBox.Text, Convert.ToDouble(RatingBox.Text));
             Response.Redirect("../Default.aspx");
+            alert.Visible= true;
         }
     }
 }
