@@ -120,7 +120,7 @@ namespace E_Commerce.Models
             return films;
         }
         public static void Modify(int id, string title, string production, string category, string year, string duration, string firstActor,
-   double price, string fileNameBg, string fileNameCover, string fileNameImg1, string fileNameImg2, string fileNameImg3, string director, double rating)
+            double price, string fileNameBg, string fileNameCover, string fileNameImg1, string fileNameImg2, string fileNameImg3, string director, double rating)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
             SqlConnection conn = new SqlConnection(connectionString);
@@ -190,5 +190,21 @@ namespace E_Commerce.Models
                 conn.Close();
             }
         }
+        public static void RemoveFilm(int id)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "DELETE FROM Films where IdFilm=@id";
+            cmd.Parameters.AddWithValue("id", id);
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }    
     }
 }
