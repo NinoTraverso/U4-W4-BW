@@ -23,7 +23,7 @@ namespace E_Commerce
 
         protected void premium_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Premium.aspx");
+            Response.Redirect("~/Premium.aspx");
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
