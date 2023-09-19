@@ -20,6 +20,9 @@ namespace E_Commerce
             Response.Redirect(FormsAuthentication.LoginUrl);
         }
 
-
+        protected void premium_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Premium.aspx");
+        }
     }
 }
