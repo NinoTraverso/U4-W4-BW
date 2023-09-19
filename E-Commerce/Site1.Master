@@ -52,8 +52,10 @@
         <div id="footer" class="bg-dark fixed-bottom">
             <a href="#topPage"><i class="fa-solid fa-arrow-up"></i></a>
             <p class="text-light">Ciao sono un piede</p>
+
         </div>
     </form>
+ <script src="Scripts/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

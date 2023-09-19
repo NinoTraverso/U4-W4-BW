@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -21,34 +22,23 @@ namespace E_Commerce.Admin
 
                 if (!IsPostBack)
                 {
-                    string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
-
-                    SqlConnection connection = new SqlConnection(connectionString);
-                    connection.Open();
-
-                    
-                    SqlCommand cmd = new SqlCommand("Select * from Films;", connection);
-
-                    
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-                    
-                    DataTable DB = new DataTable();
-
-                    
-                    adapter.Fill(DB);
-
-                    
-                    GridView1.DataSource = DB;
-                    GridView1.DataBind();
-
-                    
-                    connection.Close();
+                    List<Film> films = DB.getAllFilm();
+                    Repeater1.DataSource = films;
+                    Repeater1.DataBind();
+                   
                 }
 
 
             }
 
+        }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int id = Convert.ToInt32(btn.CommandArgument.ToString());
+            DB.RemoveFilm(id);
+            Response.Redirect("List.aspx");
         }
     }
 }
