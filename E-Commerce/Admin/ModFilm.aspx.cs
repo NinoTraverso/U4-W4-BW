@@ -17,19 +17,21 @@ namespace E_Commerce.Admin
             alert.Visible = false;
             if (Request.QueryString["id"] != null)
             {
-                InsertButton.Visible = false;
-                Film film = DB.getFilmById(Convert.ToInt32(Request.QueryString["id"]));
-                InsertButton.Visible = false;
-                TitleBox.Text = film.Title;
-                ProductionBox.Text = film.Production;
-                DirectorBox.Text = film.Director;
-                YearBox.Text = film.Year;
-                RatingBox.Text = Convert.ToString(film.Rating);
-                PriceBox.Text = Convert.ToString(film.Price);
-                FirstActorBox.Text = film.FirstActor;
-                DurationBox.Text = film.Duration;
-                CategoryBox.Text = film.Category;
-
+                if(!IsPostBack)
+                {
+                    InsertButton.Visible = false;
+                    Film film = DB.getFilmById(Convert.ToInt32(Request.QueryString["id"]));
+                    InsertButton.Visible = false;
+                    TitleBox.Text = film.Title;
+                    ProductionBox.Text = film.Production;
+                    DirectorBox.Text = film.Director;
+                    YearBox.Text = film.Year;
+                    RatingBox.Text = Convert.ToString(film.Rating);
+                    PriceBox.Text = Convert.ToString(film.Price);
+                    FirstActorBox.Text = film.FirstActor;
+                    DurationBox.Text = film.Duration;
+                    CategoryBox.Text = film.Category;
+                }
             }
             else
             {
