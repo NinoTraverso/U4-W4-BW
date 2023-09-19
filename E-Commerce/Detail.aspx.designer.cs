@@ -11,25 +11,25 @@ namespace E_Commerce
 {
 
 
-    public partial class Home
+    public partial class Detail
     {
 
         /// <summary>
-        /// Controllo video.
+        /// Controllo title.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlVideo video;
+        protected global::System.Web.UI.WebControls.Label title;
 
         /// <summary>
-        /// Controllo Repeater1.
+        /// Controllo backgroundImage.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Image backgroundImage;
     }
 }

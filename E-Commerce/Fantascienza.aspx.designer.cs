@@ -11,25 +11,16 @@ namespace E_Commerce
 {
 
 
-    public partial class Home
+    public partial class Fantascienza
     {
 
         /// <summary>
-        /// Controllo video.
+        /// Controllo GridView1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlVideo video;
-
-        /// <summary>
-        /// Controllo Repeater1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

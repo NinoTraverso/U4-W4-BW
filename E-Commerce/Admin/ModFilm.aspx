@@ -64,6 +64,7 @@
              <asp:FileUpload ID="Img3Upload" runat="server" CssClass="form-control" />
          </div>
          <div class="col-12 d-flex justify-content-center">
+             <asp:Button ID="ModifyButton" runat="server" Text="Modifica" CssClass="btn btn-outline-success my-5 w-50" OnClick="ModifyButton_Click"/>
              <asp:Button ID="InsertButton" runat="server" Text="Inserisci" CssClass="btn btn-outline-success my-5 w-50" OnClick="InsertButton_Click"/>
          </div>
 

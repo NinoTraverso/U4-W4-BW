@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -13,7 +14,26 @@ namespace E_Commerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["id"] != null)
+            {
+                InsertButton.Visible = false;
+                Film film = DB.getFilmById(Convert.ToInt32(Request.QueryString["id"]));
+                InsertButton.Visible = false;
+                TitleBox.Text = film.Title;
+                ProductionBox.Text = film.Production;
+                DirectorBox.Text = film.Director;
+                YearBox.Text = film.Year;
+                RatingBox.Text = Convert.ToString(film.Rating);
+                PriceBox.Text = Convert.ToString(film.Price);
+                FirstActorBox.Text = film.FirstActor;
+                DurationBox.Text = film.Duration;
+                CategoryBox.Text = film.Category;
 
+            }
+            else
+            {
+                ModifyButton.Visible = false;
+            }
         }
         protected void InsertButton_Click(object sender, EventArgs e)
         {
@@ -21,74 +41,72 @@ namespace E_Commerce.Admin
             if (BackgroundUpload.HasFile)
             {
                 fileNameBg = BackgroundUpload.FileName;
-                BackgroundUpload.SaveAs(Server.MapPath($"/Content/img/{BackgroundUpload.FileName}"));
+                BackgroundUpload.SaveAs(Server.MapPath($"/Content/assets/{BackgroundUpload.FileName}"));
             }
             string fileNameCover = "";
             if (CoverImgUpload.HasFile)
             {
                 fileNameCover = CoverImgUpload.FileName;
-                CoverImgUpload.SaveAs(Server.MapPath($"/Content/img/{CoverImgUpload.FileName}"));
+                CoverImgUpload.SaveAs(Server.MapPath($"/Content/assets/{CoverImgUpload.FileName}"));
             }
             string fileNameImg1 = "";
             if (Img1Upload.HasFile)
             {
                 fileNameImg1 = Img1Upload.FileName;
-                Img1Upload.SaveAs(Server.MapPath($"/Content/img/{Img1Upload.FileName}"));
+                Img1Upload.SaveAs(Server.MapPath($"/Content/assets/{Img1Upload.FileName}"));
             }
             string fileNameImg2 = "";
             if (Img2Upload.HasFile)
             {
                 fileNameImg2 = Img2Upload.FileName;
-                Img2Upload.SaveAs(Server.MapPath($"/Content/img/{Img2Upload.FileName}"));
+                Img2Upload.SaveAs(Server.MapPath($"/Content/assets/{Img2Upload.FileName}"));
             }
             string fileNameImg3 = "";
             if (Img3Upload.HasFile)
             {
                 fileNameImg3 = Img3Upload.FileName;
-                Img3Upload.SaveAs(Server.MapPath($"/Content/img/{Img3Upload.FileName}"));
+                Img3Upload.SaveAs(Server.MapPath($"/Content/assets/{Img3Upload.FileName}"));
             }
 
-            string connectionString = ConfigurationManager.ConnectionStrings["U4BW"].ConnectionString.ToString();
-            SqlConnection conn = new SqlConnection(connectionString);
+            DB.Insert(TitleBox.Text, ProductionBox.Text, CategoryBox.Text, YearBox.Text, DurationBox.Text, FirstActorBox.Text, Convert.ToDouble(PriceBox.Text),fileNameBg, fileNameCover, fileNameImg1, fileNameImg2, fileNameImg3, DirectorBox.Text,Convert.ToDouble(RatingBox.Text));
+            Response.Redirect("../Default.aspx");
+        }
 
-            try
+        protected void ModifyButton_Click(object sender, EventArgs e)
+        {
+            string fileNameBg = "";
+            if (BackgroundUpload.HasFile)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO Films VALUES(@Title, @Production, @Category, @Year, @Duration, @FirstActor, @Price, @BackgroundImg, @CoverImg, @Img1, @Img2, @Img3, @Director, @Rating)";
-                cmd.Parameters.AddWithValue("Title", TitleBox.Text);
-                cmd.Parameters.AddWithValue("Production", ProductionBox.Text);
-                cmd.Parameters.AddWithValue("Category", CategoryBox.Text);
-                cmd.Parameters.AddWithValue("Year", YearBox.Text);
-                cmd.Parameters.AddWithValue("Duration", DurationBox.Text);
-                cmd.Parameters.AddWithValue("FirstActor", FirstActorBox.Text);
-                cmd.Parameters.AddWithValue("Price", Convert.ToDouble(PriceBox.Text));
-                cmd.Parameters.AddWithValue("BackgroundImg", fileNameBg);
-                cmd.Parameters.AddWithValue("CoverImg", fileNameCover);
-                cmd.Parameters.AddWithValue("Img1", fileNameImg1);
-                cmd.Parameters.AddWithValue("Img2", fileNameImg2);
-                cmd.Parameters.AddWithValue("Img3", fileNameImg3);
-                cmd.Parameters.AddWithValue("Director", DirectorBox.Text);
-                cmd.Parameters.AddWithValue("Rating", Convert.ToDouble(RatingBox.Text));
-
-
-                int IsOk = cmd.ExecuteNonQuery();
-
-                if (IsOk > 0)
-                {
-                    Response.Redirect("../Default.aspx");
-                }
+                fileNameBg = BackgroundUpload.FileName;
+                BackgroundUpload.SaveAs(Server.MapPath($"/Content/assets/{BackgroundUpload.FileName}"));
             }
-
-            catch (Exception ex)
+            string fileNameCover = "";
+            if (CoverImgUpload.HasFile)
             {
-
+                fileNameCover = CoverImgUpload.FileName;
+                CoverImgUpload.SaveAs(Server.MapPath($"/Content/assets/{CoverImgUpload.FileName}"));
             }
-            finally
+            string fileNameImg1 = "";
+            if (Img1Upload.HasFile)
             {
-                conn.Close();
+                fileNameImg1 = Img1Upload.FileName;
+                Img1Upload.SaveAs(Server.MapPath($"/Content/assets/{Img1Upload.FileName}"));
             }
+            string fileNameImg2 = "";
+            if (Img2Upload.HasFile)
+            {
+                fileNameImg2 = Img2Upload.FileName;
+                Img2Upload.SaveAs(Server.MapPath($"/Content/assets/{Img2Upload.FileName}"));
+            }
+            string fileNameImg3 = "";
+            if (Img3Upload.HasFile)
+            {
+                fileNameImg3 = Img3Upload.FileName;
+                Img3Upload.SaveAs(Server.MapPath($"/Content/assets/{Img3Upload.FileName}"));
+            }
+            int id= Convert.ToInt32(Request.QueryString["id"]);
+            DB.Modify(id,TitleBox.Text, ProductionBox.Text, CategoryBox.Text, YearBox.Text, DurationBox.Text, FirstActorBox.Text, Convert.ToDouble(PriceBox.Text), fileNameBg, fileNameCover, fileNameImg1, fileNameImg2, fileNameImg3, DirectorBox.Text, Convert.ToDouble(RatingBox.Text));
+            Response.Redirect("../Default.aspx");
         }
     }
 }

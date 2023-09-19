@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <asp:ContentPlaceHolder ID="head" runat="server">
 
 
@@ -16,35 +18,54 @@
 
 </head>
 
-<body>
+<body class="text-bg-dark">
     <form id="form1" runat="server">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom container">
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-      </div>
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom position-fixed start-0 end-0 text-bg-dark">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"></use></svg>
+                </a>
+            </div>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="../Default.aspx" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2">Carrello</a></li>
-      </ul>
+                                
 
-      <div class="col-md-3 text-end">
-          <asp:Button ID="loginButton" class="btn btn-primary" runat="server" Text="Login" OnClick="loginButton_Click" />
-        <button type="button" class="btn btn-primary">Sign-up</button>
-      </div>
-    </header>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="../Default.aspx" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2">Carrello</a></li>
+                <li><a href="#" class="nav-link px-2">Fantascienza</a></li>
+            </ul>
+                       
+
+            <div class="col-md-3 text-end">
+                <asp:Button ID="loginButton" class="btn btn-primary" runat="server" Text="Login" OnClick="loginButton_Click" />
+                <button type="button" class="btn btn-primary">Sign-up</button>
+            </div>
+        </header>
+
+        <div class="spacer"></div>
+<div class="content-container mb-5 d-flex flex-row align-content-between justify-content-center">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" >
+        <asp:LinkButton ID="LinkButtonAzione" runat="server" class="my-3 mx-3 px-4 text-decoration-none text-light" OnClick="linkButtonAzione_Click">Azione</asp:LinkButton>
+        <asp:LinkButton ID="LinkButtonFantascienza" runat="server" class="my-3 mx-3 px-4 text-decoration-none text-light" OnClick="linkButtonFantascienza_Click">Fantascienza</asp:LinkButton>
+        <asp:LinkButton ID="LinkButtonHorror" runat="server" class="my-3 mx-3 px-4 text-decoration-none text-light" OnClick="linkButtonHorror_Click">Horror</asp:LinkButton>
+        <asp:LinkButton ID="LinkButtonFantasy" runat="server" class="my-3 mx-3 px-4 text-decoration-none text-light" OnClick="linkButtonFantasy_Click">Fantasy</asp:LinkButton>
+        <asp:LinkButton ID="LinkButtonCommedia" runat="server" class="my-3 mx-3 px-4 text-decoration-none text-light" OnClick="linkButtonCommedia_Click">Commedia</asp:LinkButton>
+    </asp:ContentPlaceHolder>
+</div>
         
-        <div>
+        <div class="spacer"></div>
+        <div class="content-container mb-5">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
 
+
         <div id="footer" class="bg-dark fixed-bottom">
-        <p class="text-light">Ciao sono un piede</p>
-    </div>
+            <p class="text-light">Ciao sono un piede</p>
+        </div>
     </form>
 </body>
 
 </html>
+ 
