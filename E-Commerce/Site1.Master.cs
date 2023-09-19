@@ -22,27 +22,27 @@ namespace E_Commerce
 
         protected void linkButtonAzione_Click(object sender, EventArgs e)
         {
-            Response.Redirect(FormsAuthentication.LoginUrl);
+            Response.Redirect("~/Azione.aspx");
         }
 
         protected void linkButtonFantascienza_Click(object sender, EventArgs e)
         {
-            Response.Redirect(FormsAuthentication.LoginUrl);
+            Response.Redirect("~/Fantascienza.aspx");
         }
 
         protected void linkButtonHorror_Click(object sender, EventArgs e)
         {
-            Response.Redirect(FormsAuthentication.LoginUrl);
+            Response.Redirect("~/Horror.aspx");
         }
 
         protected void linkButtonFantasy_Click(object sender, EventArgs e)
         {
-            Response.Redirect(FormsAuthentication.LoginUrl);
+            Response.Redirect("~/Fantasy.aspx");
         }
 
         protected void linkButtonCommedia_Click(object sender, EventArgs e)
         {
-            Response.Redirect(FormsAuthentication.LoginUrl);
+            Response.Redirect("~/Commedia.aspx");
         }
 
 
