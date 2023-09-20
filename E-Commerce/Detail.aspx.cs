@@ -11,11 +11,21 @@ namespace E_Commerce
 {
     public partial class Detail : System.Web.UI.Page
     {
+        int id;
+        List<Film> carrello = new List<Film>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies[".ASPXAUTH"] == null)
+                AddCart.Text = "Effettua il Login per acquistare";
+            else AddCart.Text = "Metti nel Carrello";
+            
+            if (Session["Carrello"] != null)
+            {
+                carrello = (List<Film>)Session["Carrello"];
+            }
             if (!IsPostBack)
             {
-                int id = Convert.ToInt32(Request.QueryString["idFilm"]);
+                id = Convert.ToInt32(Request.QueryString["idFilm"]);
                 Film film = DB.getFilmById(id);
 
                 title.Text = film.Title;
@@ -26,7 +36,7 @@ namespace E_Commerce
                 firstActor.InnerText = $"Attore protagonista: {film.FirstActor}";
                 price.InnerText = $"Prezzo: {String.Format("{0:0.00 €}", film.Price)}";
                 rating.InnerText = $"Rating IMDb: {String.Format("{0:0.0}", film.Rating)}";
-                duration.InnerText = $"Durata: {String.Format("{0:0.0}", film.Duration)}h";
+                duration.InnerText = $"Durata: {String.Format("{0:0.0}", film.Duration)}";
                 production.InnerText = $"Produttore: {film.Production}";
                 if(film.Img1 != "") {
                     Image1.ImageUrl = $"Content/assets/{film.Img1}";
@@ -57,6 +67,19 @@ namespace E_Commerce
 
                 badge.InnerText = film.Category;
             }
+        }
+
+        protected void AddCart_Click(object sender, EventArgs e)
+        {
+            if (AddCart.Text == "Metti nel Carrello")
+            {
+                id = Convert.ToInt32(Request.QueryString["idFilm"]);
+                Film selectedFilm = DB.getFilmById(id);
+                carrello.Add(selectedFilm);
+                Session["Carrello"] = carrello;
+                Response.Redirect("Default.aspx");
+            }
+            else Response.Redirect("Login.aspx");
         }
     }
 }

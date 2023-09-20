@@ -35,11 +35,9 @@
                             <asp:ImageButton ID="Image2" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo" />
                             <asp:ImageButton ID="Image3" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo" />
                         </div>
-
-
                     </div>
                     <div class="card-footer text-body-secondary">
-                        <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success " />
+                        <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success" OnClick="AddCart_Click" />
                     </div>
                 </div>
             </div>

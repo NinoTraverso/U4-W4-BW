@@ -51,7 +51,57 @@
 
         <div class="spacer"></div>
         <div id="footer" class="bg-dark">
-            <p class="text-light">Ciao sono un piede</p>
+            <h3 class="text-align-start mx-5">CodeBuster</h3>
+            <div class="container">
+                <div class="row">
+
+                    <div class="d-flex flex-row">
+                        <div class="d-flex flex-column mt-3">
+                            <p class="my-0">Help</p>
+                            <p class="my-0">Privacy</p>
+                            <p class="my-0">Terms</p>
+                            <p class="my-0">About</p>
+                        </div>
+                        <div class="d-flex flex-column mx-5 mt-3">
+                            <p class="my-0">Get notification when new movies are in!</p>
+                            <p class="my-0">Subscribe to our news letters!</p>
+                            <div class="d-flex flex-row">
+                                <asp:TextBox ID="NewsLetters" runat="server" placeholder="Insert email address"></asp:TextBox>
+                                <asp:Button ID="NewsLettersButton" runat="server" Text="Subscribe" />
+                            </div>
+                            <div class="d-flex flex-row">
+                                <asp:CheckBox ID="AgeCheckBox" runat="server" />
+                                <asp:Label ID="CheckBoxLabel" runat="server" Text="I confirm I am older than 16"></asp:Label>
+                            </div>
+                        </div>
+                        <div id="icons" class="mt-4">
+                            <div id="iconContainer">
+                                <a class="fs-1 text mx-2" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                <a class="fs-1 text mx-2" href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="background: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); -webkit-background-clip: text; color: transparent;"></i></a>
+                                <a class="fs-1 text mx-2" href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest" style="color: #c00c0c;"></i></i></a>
+                                <a class="fs-1 text mx-2" href="https://twitter.com/"><i class="fa-brands fa-twitter" style="color: #79d5ec;"></i></a>
+                                <a class="fs-1 text mx-2" href="https://www.youtube.com/"><i class="fa-brands fa-youtube" style="color: #ee3d11;"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="border-top d-flex flex-row align-items-center">
+                        <p class="px-2 my-2">Website Terms</p> | <p class="px-2 my-2">Privacy Policy</p> | <p class="px-2 my-2">Supplier Code of Conduct</p> | <p class="px-2 my-2">Do Not Sell My Information</p>
+                    </div>
+                    <div class="border-top d-flex flex-row align-items-center">
+                        <p class="px-2 my-2">Team:</p>
+                        <p class="px-2 my-2">Nicole Beani</p>
+                        |
+                        <p class="px-2 my-2">Giuseppe Cifarelli</p>
+                        |
+                        <p class="px-2 my-2">Lorenzo Siani</p>
+                        |
+                        <p class="px-2 my-2">Nino Traverso</p>
+                        |
+                        <p class="px-2 my-2">Andreas Ubertini</p>
+                    </div>
+               </div>
+            </div>
         </div>
          <div class="offcanvas offcanvas-start bg-dark text-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
      <div class="offcanvas-header">
