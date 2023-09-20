@@ -22,7 +22,7 @@ namespace E_Commerce
                     loginButton.Text = "Logout";
                     signInButton.Visible = false;
                     User user = DB.getUser(HttpContext.Current.User.Identity.Name);
-                    profileImg.ImageUrl = $"/Content/assets/{user.Image}";
+                    profileImg.ImageUrl = $"~/Content/assets/{user.Image}";
                     if (user.Role == "admin") adminBtn.Visible = true;
                     else adminBtn.Visible = false;
                 }

@@ -37,27 +37,11 @@
                         Area Admin
                     </button>
                 </li>
-                <li>
-                    <div class="dropdown text-end">
-                        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        
-                            <asp:Image ID="profileImg" runat="server" CssClass="rounded-circle" Height="32"  />
-                        </a>
-                        <ul class="dropdown-menu text-small" style="">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
-                    </div>
-                </li>
             </ul>
 
 
             <div class="col-md-3 text-end">
+                <asp:Image ID="profileImg" runat="server" CssClass="rounded-circle" Height="32"  />
                 <asp:Button ID="premiumButton" runat="server" CssClass="btn btn-success" Text="Abbonati!" OnClick="premium_Click" />
                 <asp:Button ID="loginButton" class="btn btn-primary" runat="server" Text="Login" OnClick="loginButton_Click" />
                 <asp:Button ID="signInButton" runat="server" Text="Sign In" CssClass="btn btn-primary" OnClick="signInButton_Click" />
