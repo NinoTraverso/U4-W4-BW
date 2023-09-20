@@ -36,7 +36,7 @@ namespace E_Commerce
                 firstActor.InnerText = $"Attore protagonista: {film.FirstActor}";
                 price.InnerText = $"Prezzo: {String.Format("{0:0.00 €}", film.Price)}";
                 rating.InnerText = $"Rating IMDb: {String.Format("{0:0.0}", film.Rating)}";
-                duration.InnerText = $"Durata: {String.Format("{0:0.0}", film.Duration)}h";
+                duration.InnerText = $"Durata: {String.Format("{0:0.0}", film.Duration)}";
                 production.InnerText = $"Produttore: {film.Production}";
                 if(film.Img1 != "") {
                     Image1.ImageUrl = $"Content/assets/{film.Img1}";
