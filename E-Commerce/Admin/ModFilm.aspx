@@ -49,7 +49,7 @@
                 <asp:TextBox ID="RatingBox" runat="server" CssClass="form-control w-50"></asp:TextBox>
             </div>
             <div class="col-12 mt-5 d-flex flex-column align-items-center">
-                <p class="h5 m-0">Immagine Backgorund</p>
+                <p class="h5 m-0">Immagine Background</p>
                 <asp:FileUpload ID="BackgroundUpload" runat="server" CssClass="form-control" />
             </div>
             <div class="col-12 mt-5 d-flex flex-column align-items-center">

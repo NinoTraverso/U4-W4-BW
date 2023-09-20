@@ -71,7 +71,7 @@ namespace E_Commerce.Admin
                 Img3Upload.SaveAs(Server.MapPath($"/Content/assets/{Img3Upload.FileName}"));
             }
 
-            DB.Insert(TitleBox.Text, ProductionBox.Text, CategoryBox.Text, YearBox.Text, DurationBox.Text, FirstActorBox.Text, Convert.ToDouble(PriceBox.Text),fileNameBg, fileNameCover, fileNameImg1, fileNameImg2, fileNameImg3, DirectorBox.Text,Convert.ToDouble(RatingBox.Text));
+            DB.InsertFilm(TitleBox.Text, ProductionBox.Text, CategoryBox.Text, YearBox.Text, DurationBox.Text, FirstActorBox.Text, Convert.ToDouble(PriceBox.Text),fileNameBg, fileNameCover, fileNameImg1, fileNameImg2, fileNameImg3, DirectorBox.Text,Convert.ToDouble(RatingBox.Text));
             Response.Redirect("../Default.aspx");
         }
 

@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="E_Commerce.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Content/Site.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3 class="fw-bold text-white text-center">Interstellar</h3>
@@ -99,5 +98,6 @@
         </ItemTemplate>
     </asp:Repeater>
 </div>
+    <a href="#topPage" class="topArrow"><i class="fa-solid fa-arrow-up"></i></a>
 
 </asp:Content>
