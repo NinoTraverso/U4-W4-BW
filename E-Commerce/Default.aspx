@@ -10,94 +10,140 @@
         </video>
     </div>
 
-    <div class="anchor-container mb-5 d-flex align-items-center justify-content-evenly text-bg-secondary">
-        <a href="#Azione" class="btn btn-warning px-2 my-2">Azione</a>
-        <a href="#Fantascienza" class="btn btn-info px-2 my-2">Fantascienza</a>
-        <a href="#Horror" class="btn btn-danger px-2 my-2">Horror</a>
-        <a href="#Fantasy" class="btn btn-success px-2 my-2">Fantasy</a>
-        <a href="#Commedia" class="btn btn-light px-2 my-2">Commedia</a>
-    </div>
+    <div class="prova">
 
 
-    <h2 id="Azione" class="text-center">Azione</h2>
-    <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
-        <asp:Repeater ID="RepeaterAzione" runat="server" ItemType="E_Commerce.Models.Film">
-            <ItemTemplate>
-                <div>
-                    <div class="card text-bg-secondary m-3" style="width: 18rem;">
-                        <a href="Detail.aspx?idFilm=<%# Item.Id %>">
-                            <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
-                        </a>
 
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item bg-dark">
+                <h2 class="accordion-header">
+                    <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Azione
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                            <asp:Repeater ID="RepeaterAzione" runat="server" ItemType="E_Commerce.Models.Film">
+                                <ItemTemplate>
+                                    <div>
+                                        <div class="card text-bg-secondary m-3" style="width: 18rem;">
+                                            <a href="Detail.aspx?idFilm=<%# Item.Id %>">
+                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
                     </div>
                 </div>
-            </ItemTemplate>
-        </asp:Repeater>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Fantascienza
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                            <asp:Repeater ID="RepeaterFantascienza" runat="server" ItemType="E_Commerce.Models.Film">
+                                <ItemTemplate>
+                                    <div>
+                                        <div class="card text-bg-secondary m-3" style="width: 18rem;">
+                                            <a href="Detail.aspx?idFilm=<%# Item.Id %>">
+                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Horror
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                            <asp:Repeater ID="RepeaterHorror" runat="server" ItemType="E_Commerce.Models.Film">
+                                <ItemTemplate>
+                                    <div>
+                                        <div class="card text-bg-secondary m-3" style="width: 18rem;">
+                                            <a href="Detail.aspx?idFilm=<%# Item.Id %>">
+                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Fantasy
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                            <asp:Repeater ID="RepeaterFantasy" runat="server" ItemType="E_Commerce.Models.Film">
+                                <ItemTemplate>
+                                    <div>
+                                        <div class="card text-bg-secondary m-3" style="width: 18rem;">
+                                            <a href="Detail.aspx?idFilm=<%# Item.Id %>">
+                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Commedia
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                            <asp:Repeater ID="RepeaterCommedia" runat="server" ItemType="E_Commerce.Models.Film">
+                                <ItemTemplate>
+                                    <div>
+                                        <div class="card text-bg-secondary m-3" style="width: 18rem;">
+                                            <a href="Detail.aspx?idFilm=<%# Item.Id %>">
+                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-
-    <h2 id="Fantascienza" class="text-center">Fantascienza</h2>
-<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
-    <asp:Repeater ID="RepeaterFantascienza" runat="server" ItemType="E_Commerce.Models.Film">
-        <ItemTemplate>
-            <div>
-                <div class="card text-bg-secondary m-3" style="width: 18rem;">
-                    <a href="Detail.aspx?idFilm=<%# Item.Id %>">
-                        <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
-                    </a>
-
-                </div>
-            </div>
-        </ItemTemplate>
-    </asp:Repeater>
-</div>
-
-        <h2 id="Horror" class="text-center">Horror</h2>
-<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
-    <asp:Repeater ID="RepeaterHorror" runat="server" ItemType="E_Commerce.Models.Film">
-        <ItemTemplate>
-            <div>
-                <div class="card text-bg-secondary m-3" style="width: 18rem;">
-                    <a href="Detail.aspx?idFilm=<%# Item.Id %>">
-                        <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
-                    </a>
-
-                </div>
-            </div>
-        </ItemTemplate>
-    </asp:Repeater>
-</div>
-
-        <h2 id="Fantasy" class="text-center">Fantasy</h2>
-<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
-    <asp:Repeater ID="RepeaterFantasy" runat="server" ItemType="E_Commerce.Models.Film">
-        <ItemTemplate>
-            <div>
-                <div class="card text-bg-secondary m-3" style="width: 18rem;">
-                    <a href="Detail.aspx?idFilm=<%# Item.Id %>">
-                        <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
-                    </a>
-
-                </div>
-            </div>
-        </ItemTemplate>
-    </asp:Repeater>
-</div>
-
-        <h2 id="Commedia" class="text-center">Commedia</h2>
-<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
-    <asp:Repeater ID="RepeaterCommedia" runat="server" ItemType="E_Commerce.Models.Film">
-        <ItemTemplate>
-            <div>
-                <div class="card text-bg-secondary m-3" style="width: 18rem;">
-                    <a href="Detail.aspx?idFilm=<%# Item.Id %>">
-                        <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
-                    </a>
-
-                </div>
-            </div>
-        </ItemTemplate>
-    </asp:Repeater>
-</div>
     <a href="#topPage" class="topArrow"><i class="fa-solid fa-arrow-up"></i></a>
 
 </asp:Content>
