@@ -11,7 +11,7 @@
                     <div class="card-header text-center">
                         <asp:Label ID="title" runat="server" CssClass="fs-2 fw-bold"></asp:Label>
                     </div>
-                    <div class="position-relative">
+                    <div class="position-relative px-5">
                         <asp:Image ID="backgroundImage" runat="server" CssClass="card-img-top" />
                         <div class="">
                             <asp:Image ID="ImageCover" runat="server" CssClass="position-absolute bottom-0 start-0 w-25 border border-danger shadow-lg" />
