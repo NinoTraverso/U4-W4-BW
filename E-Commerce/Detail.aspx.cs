@@ -21,7 +21,10 @@ namespace E_Commerce
                 title.Text = film.Title;
                 backgroundImage.ImageUrl = $"Content/assets/{film.BackgroundImg}";
                 ImageCover.ImageUrl = $"Content/assets/{film.CoverImg}";
-              
+                year.InnerText = $"Anno di uscita: {film.Year}";
+                director.InnerText = $"Regista: {film.Director}";
+                firstActor.InnerText = $"Attore protagonista: {film.FirstActor}";
+                badge.InnerText = film.Category;
             }
         }
     }

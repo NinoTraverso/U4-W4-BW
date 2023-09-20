@@ -19,9 +19,16 @@
                         </div>
 
                         <div class="card-body">
-                            
+                            <span id="badge" runat="server" class="badge text-bg-primary my-1"></span>
                             <p class="card-text" id="year" runat="server"></p>
-                            <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success" />
+                            <p class="card-text" id="director" runat="server"></p>
+                            <p class="card-text" id="production" runat="server"></p>
+                            <p class="card-text" id="firstActor" runat="server"></p>
+                            <p class="card-text" id="price" runat="server"></p>
+                            <p class="card-text" id="rating" runat="server"></p>
+                            <p class="card-text" id="duration" runat="server"></p>
+                            
+                            <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success " />
                         </div>
                     </div>
                 </div>
