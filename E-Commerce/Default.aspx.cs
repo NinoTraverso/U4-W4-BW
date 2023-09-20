@@ -41,7 +41,7 @@ namespace E_Commerce
                 RepeaterCommedia.DataSource = commediaFilms;
                 RepeaterCommedia.DataBind();
 
-
+                if (Request.Cookies[".ASPXAUTH"] != null) title.InnerText = $"Ciao {HttpContext.Current.User.Identity.Name}!";
             }
         }
     }
