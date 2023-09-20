@@ -12,7 +12,7 @@
         </div>
 
 
-        <div class="accordion bg-dark mt-3" id="accordionExample">
+        <div class="accordion mt-3" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-warning fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
