@@ -34,6 +34,37 @@ namespace E_Commerce
                 year.InnerText = $"Anno di uscita: {film.Year}";
                 director.InnerText = $"Regista: {film.Director}";
                 firstActor.InnerText = $"Attore protagonista: {film.FirstActor}";
+                price.InnerText = $"Prezzo: {String.Format("{0:0.00 €}", film.Price)}";
+                rating.InnerText = $"Rating IMDb: {String.Format("{0:0.0}", film.Rating)}";
+                duration.InnerText = $"Durata: {String.Format("{0:0.0}", film.Duration)}h";
+                production.InnerText = $"Produttore: {film.Production}";
+                if(film.Img1 != "") {
+                    Image1.ImageUrl = $"Content/assets/{film.Img1}";
+                    ImageModal1.ImageUrl = $"Content/assets/{film.Img1}";
+                }
+                else
+                {
+                    Image1.Visible = false ;
+                }
+                if (film.Img2 != "")
+                {
+                    Image2.ImageUrl = $"Content/assets/{film.Img2}";
+                    ImageModal2.ImageUrl = $"Content/assets/{film.Img2}";
+                }
+                else
+                {
+                    Image2.Visible = false;
+                }
+                if (film.Img3 != "")
+                {
+                    Image3.ImageUrl = $"Content/assets/{film.Img3}";
+                    ImageModaL3.ImageUrl = $"Content/assets/{film.Img3}";
+                }
+                else
+                {
+                    Image3.Visible = false;
+                }
+
                 badge.InnerText = film.Category;
             }
         }
