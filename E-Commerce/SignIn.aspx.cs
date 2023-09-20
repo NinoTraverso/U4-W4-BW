@@ -18,32 +18,26 @@ namespace E_Commerce
 
         protected void signInButton_Click(object sender, EventArgs e)
         {
-            List<User> users = new List<User>();
-            users = DB.getAllUsers();
+            List<User> users = DB.getAllUsers();
 
-            foreach (User user in users)
-            {
-                if(user.Username == username.Text)
-                    errorMessage.Visible = true;
-                else
+            User user = DB.getUser(username.Text);
+            if (user == null) {
+                string filename = "";
+                if (avatar.HasFile)
                 {
-                    string filename = "";
-                    if (avatar.HasFile)
-                    {
-                        filename = avatar.FileName;
-                        avatar.SaveAs(Server.MapPath($"/Content/assets/{avatar.FileName}"));
-                    }
-                    else filename = "default-avatar.jpg";
-
-                    DB.SignIn(name.Text, surname.Text, username.Text, password.Text, filename);
-                    FormsAuthentication.SetAuthCookie(username.Text, false);
-                    HttpCookie auth = new HttpCookie("username");
-                    auth.Value = username.Text;
-                    Response.Cookies.Add(auth);
-                    Response.Redirect("Default.aspx");
+                    filename = avatar.FileName;
+                    avatar.SaveAs(Server.MapPath($"/Content/assets/{avatar.FileName}"));
                 }
+                else filename = "default-avatar.jpg";
 
-            }
+                DB.SignIn(name.Text, surname.Text, username.Text, password.Text, filename);
+                FormsAuthentication.SetAuthCookie(username.Text, false);
+                HttpCookie auth = new HttpCookie("username");
+                auth.Value = username.Text;
+                Response.Cookies.Add(auth);
+                Response.Redirect("Default.aspx");
+            } else errorMessage.Visible = true;
+           
         }
     }
 }
