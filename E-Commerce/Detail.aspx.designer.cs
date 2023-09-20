@@ -159,6 +159,24 @@ namespace E_Commerce
         protected global::System.Web.UI.WebControls.Button AddCart;
 
         /// <summary>
+        /// Controllo CommentBox.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CommentBox;
+
+        /// <summary>
+        /// Controllo SendComment.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SendComment;
+
+        /// <summary>
         /// Controllo ImageModal1.
         /// </summary>
         /// <remarks>
