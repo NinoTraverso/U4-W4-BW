@@ -12,8 +12,6 @@
 
     <div class="prova">
 
-
-
         <div class="accordion" id="accordionExample">
             <div class="accordion-item bg-dark">
                 <h2 class="accordion-header">
