@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="Admin\List.aspx" />
     <Content Include="Admin\ModFilm.aspx" />
+    <Content Include="Carrello.aspx" />
     <Content Include="Content\assets\interstellar.mp4" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -203,6 +204,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Carrello.aspx.cs">
+      <DependentUpon>Carrello.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrello.aspx.designer.cs">
+      <DependentUpon>Carrello.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Detail.aspx.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
