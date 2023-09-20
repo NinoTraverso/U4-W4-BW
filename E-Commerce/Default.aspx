@@ -20,11 +20,11 @@
 
 
     <h2 id="Azione" class="text-center">Azione</h2>
-    <div class="row row-cols-4">
+    <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
         <asp:Repeater ID="RepeaterAzione" runat="server" ItemType="E_Commerce.Models.Film">
             <ItemTemplate>
                 <div>
-                    <div class="card text-bg-secondary" style="width: 18rem;">
+                    <div class="card text-bg-secondary m-3" style="width: 18rem;">
                         <a href="Detail.aspx?idFilm=<%# Item.Id %>">
                             <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
                         </a>
@@ -36,11 +36,11 @@
     </div>
 
     <h2 id="Fantascienza" class="text-center">Fantascienza</h2>
-<div class="row row-cols-4">
+<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
     <asp:Repeater ID="RepeaterFantascienza" runat="server" ItemType="E_Commerce.Models.Film">
         <ItemTemplate>
             <div>
-                <div class="card text-bg-secondary" style="width: 18rem;">
+                <div class="card text-bg-secondary m-3" style="width: 18rem;">
                     <a href="Detail.aspx?idFilm=<%# Item.Id %>">
                         <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
                     </a>
@@ -52,11 +52,11 @@
 </div>
 
         <h2 id="Horror" class="text-center">Horror</h2>
-<div class="row row-cols-4">
+<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
     <asp:Repeater ID="RepeaterHorror" runat="server" ItemType="E_Commerce.Models.Film">
         <ItemTemplate>
             <div>
-                <div class="card text-bg-secondary" style="width: 18rem;">
+                <div class="card text-bg-secondary m-3" style="width: 18rem;">
                     <a href="Detail.aspx?idFilm=<%# Item.Id %>">
                         <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
                     </a>
@@ -68,11 +68,11 @@
 </div>
 
         <h2 id="Fantasy" class="text-center">Fantasy</h2>
-<div class="row row-cols-4">
+<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
     <asp:Repeater ID="RepeaterFantasy" runat="server" ItemType="E_Commerce.Models.Film">
         <ItemTemplate>
             <div>
-                <div class="card text-bg-secondary" style="width: 18rem;">
+                <div class="card text-bg-secondary m-3" style="width: 18rem;">
                     <a href="Detail.aspx?idFilm=<%# Item.Id %>">
                         <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
                     </a>
@@ -84,11 +84,11 @@
 </div>
 
         <h2 id="Commedia" class="text-center">Commedia</h2>
-<div class="row row-cols-4">
+<div class="row row-cols-3 row-cols-lg-4 justify-content-center">
     <asp:Repeater ID="RepeaterCommedia" runat="server" ItemType="E_Commerce.Models.Film">
         <ItemTemplate>
             <div>
-                <div class="card text-bg-secondary" style="width: 18rem;">
+                <div class="card text-bg-secondary m-3" style="width: 18rem;">
                     <a href="Detail.aspx?idFilm=<%# Item.Id %>">
                         <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
                     </a>
