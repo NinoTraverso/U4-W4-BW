@@ -66,13 +66,13 @@ namespace E_Commerce
                 }
                 if (film.Category == "Azione")
                 {
-                    badge.Attributes.Add("class", "badge text-bg-danger my-1");
+                    badge.Attributes.Add("class", "badge text-bg-warning my-1");
                 }else if(film.Category == "Fantascienza")
                 {
                     badge.Attributes.Add("class", "badge text-bg-success my-1");
                 }else if(film.Category == "Horro")
                 {
-                    badge.Attributes.Add("class", "badge text-bg-warning my-1");
+                    badge.Attributes.Add("class", "badge text-bg-danger my-1");
                 }else if(film.Category == "Fantasy")
                 {
                     badge.Attributes.Add("class", "badge text-bg-primary my-1");
