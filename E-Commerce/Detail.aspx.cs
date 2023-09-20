@@ -24,6 +24,8 @@ namespace E_Commerce
                 year.InnerText = $"Anno di uscita: {film.Year}";
                 director.InnerText = $"Regista: {film.Director}";
                 firstActor.InnerText = $"Attore protagonista: {film.FirstActor}";
+                price.InnerText = $"Prezzo: {String.Format("{0:0.00 €}", film.Price)}";
+                rating.InnerText = $"Rating IMDb: {String.Format("{0:0.0}", film.Rating)}";
                 badge.InnerText = film.Category;
             }
         }
