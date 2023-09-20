@@ -70,7 +70,7 @@ namespace E_Commerce
                 }else if(film.Category == "Fantascienza")
                 {
                     badge.Attributes.Add("class", "badge text-bg-success my-1");
-                }else if(film.Category == "Horro")
+                }else if(film.Category == "Horror")
                 {
                     badge.Attributes.Add("class", "badge text-bg-danger my-1");
                 }else if(film.Category == "Fantasy")
