@@ -97,7 +97,7 @@
                             <div id="iconContainer">
                                 <a class="fs-1 text mx-2" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
                                 <a class="fs-1 text mx-2" href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="background: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); -webkit-background-clip: text; color: transparent;"></i></a>
-                                <a class="fs-1 text mx-2" href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest" style="color: #c00c0c;"></i></i></a>
+                                <a class="fs-1 text mx-2" href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest" style="color: #c00c0c;"></i></a>
                                 <a class="fs-1 text mx-2" href="https://twitter.com/"><i class="fa-brands fa-twitter" style="color: #79d5ec;"></i></a>
                                 <a class="fs-1 text mx-2" href="https://www.youtube.com/"><i class="fa-brands fa-youtube" style="color: #ee3d11;"></i></a>
                             </div>
