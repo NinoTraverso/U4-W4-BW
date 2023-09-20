@@ -28,7 +28,7 @@
                             <p class="card-text" id="rating" runat="server"></p>
                             <p class="card-text" id="duration" runat="server"></p>
                             
-                            <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success " />
+                            <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success" OnClick="AddCart_Click" />
                         </div>
                     </div>
                 </div>

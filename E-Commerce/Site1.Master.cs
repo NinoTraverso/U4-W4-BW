@@ -40,6 +40,7 @@ namespace E_Commerce
             else
             {
                 FormsAuthentication.SignOut();
+                Session.Clear();
                 Response.Redirect("Default.aspx");
             }
         }
