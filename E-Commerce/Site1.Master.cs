@@ -21,13 +21,13 @@ namespace E_Commerce
                     loginButton.Text = "Logout";
                     signInButton.Visible = false;
                     User user = DB.getUser(Request.Cookies["username"].Value);
-                    if (user.Role == "admin") adminButton.Visible = true;
-                    else adminButton.Visible = false;
+                    if (user.Role == "admin") adminBtn.Visible = true;
+                    else adminBtn.Visible = false;
                 }
                 else
                 {
                     loginButton.Text = "Login";
-                    adminButton.Visible = false;
+                    adminBtn.Visible = false;
                     signInButton.Visible = true;
                 }
             }
