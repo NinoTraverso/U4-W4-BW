@@ -21,8 +21,8 @@ namespace E_Commerce
                     loginButton.Text = "Logout";
                     signInButton.Visible = false;
                     User user = DB.getUser(HttpContext.Current.User.Identity.Name);
-                    if (user.Role == "admin") adminButton.Visible = true;
-                    else adminButton.Visible = false;
+                    if (user.Role == "admin") adminBtn.Visible = true;
+                    else adminBtn.Visible = false;
                 }
                 else
                 {
