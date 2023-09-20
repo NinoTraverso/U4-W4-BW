@@ -42,6 +42,15 @@ namespace E_Commerce
         protected global::System.Web.UI.HtmlControls.HtmlButton adminBtn;
 
         /// <summary>
+        /// Controllo profileImg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image profileImg;
+
+        /// <summary>
         /// Controllo premiumButton.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,42 @@ namespace E_Commerce
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+
+        /// <summary>
+        /// Controllo NewsLetters.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewsLetters;
+
+        /// <summary>
+        /// Controllo NewsLettersButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button NewsLettersButton;
+
+        /// <summary>
+        /// Controllo AgeCheckBox.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox AgeCheckBox;
+
+        /// <summary>
+        /// Controllo CheckBoxLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CheckBoxLabel;
 
         /// <summary>
         /// Controllo LinkButton1.

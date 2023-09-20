@@ -14,13 +14,15 @@ namespace E_Commerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+
+            if (!IsPostBack)
             {
                 if (Request.Cookies[".ASPXAUTH"] != null)
                 {
                     loginButton.Text = "Logout";
                     signInButton.Visible = false;
                     User user = DB.getUser(HttpContext.Current.User.Identity.Name);
+                    profileImg.ImageUrl = $"~/Content/assets/{user.Image}";
                     if (user.Role == "admin") adminBtn.Visible = true;
                     else adminBtn.Visible = false;
                 }
@@ -29,6 +31,7 @@ namespace E_Commerce
                     loginButton.Text = "Login";
                     adminBtn.Visible = false;
                     signInButton.Visible = true;
+                    profileImg.Visible = false;
                 }
             }
         }
@@ -40,6 +43,7 @@ namespace E_Commerce
             else
             {
                 FormsAuthentication.SignOut();
+                Session.Clear();
                 Response.Redirect("Default.aspx");
             }
         }
