@@ -4,5 +4,25 @@
 .ImageCover{
     width:20px;
 }
+header {
+    z-index: 1;
+}
 
+.spacer {
+    height: 100px;
+}
+
+.topArrow {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
 
