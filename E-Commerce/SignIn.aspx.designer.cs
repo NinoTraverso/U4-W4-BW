@@ -11,53 +11,53 @@ namespace E_Commerce
 {
 
 
-    public partial class Site1
+    public partial class SignIn
     {
 
         /// <summary>
-        /// Controllo head.
+        /// Controllo name.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
-        /// Controllo form1.
+        /// Controllo surname.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox surname;
 
         /// <summary>
-        /// Controllo adminBtn.
+        /// Controllo username.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton adminBtn;
+        protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
-        /// Controllo premiumButton.
+        /// Controllo password.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button premiumButton;
+        protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
-        /// Controllo loginButton.
+        /// Controllo avatar.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginButton;
+        protected global::System.Web.UI.WebControls.FileUpload avatar;
 
         /// <summary>
         /// Controllo signInButton.
@@ -69,30 +69,12 @@ namespace E_Commerce
         protected global::System.Web.UI.WebControls.Button signInButton;
 
         /// <summary>
-        /// Controllo ContentPlaceHolder1.
+        /// Controllo errorMessage.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-
-        /// <summary>
-        /// Controllo LinkButton1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
-
-        /// <summary>
-        /// Controllo LinkButton2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorMessage;
     }
 }

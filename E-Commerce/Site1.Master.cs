@@ -1,6 +1,8 @@
-﻿using System;
+﻿using E_Commerce.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -12,39 +14,54 @@ namespace E_Commerce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                if (Request.Cookies[".ASPXAUTH"] != null)
+                {
+                    loginButton.Text = "Logout";
+                    signInButton.Visible = false;
+                    User user = DB.getUser(HttpContext.Current.User.Identity.Name);
+                    if (user.Role == "admin") adminBtn.Visible = true;
+                    else adminBtn.Visible = false;
+                }
+                else
+                {
+                    loginButton.Text = "Login";
+                    adminBtn.Visible = false;
+                    signInButton.Visible = true;
+                }
+            }
         }
 
         protected void loginButton_Click(object sender, EventArgs e)
         {
+            if(loginButton.Text == "Login")
             Response.Redirect(FormsAuthentication.LoginUrl);
+            else
+            {
+                FormsAuthentication.SignOut();
+                Response.Redirect("Default.aspx");
+            }
         }
 
-        protected void linkButtonAzione_Click(object sender, EventArgs e)
+        protected void premium_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Azione.aspx");
+            Response.Redirect("~/Premium.aspx");
         }
 
-        protected void linkButtonFantascienza_Click(object sender, EventArgs e)
+        protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Fantascienza.aspx");
+            Response.Redirect("~/Admin/List.aspx");
         }
 
-        protected void linkButtonHorror_Click(object sender, EventArgs e)
+        protected void LinkButton2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Horror.aspx");
+            Response.Redirect("~/Admin/ModFilm.aspx");
         }
 
-        protected void linkButtonFantasy_Click(object sender, EventArgs e)
+        protected void signInButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Fantasy.aspx");
+            Response.Redirect("SignIn.aspx");
         }
-
-        protected void linkButtonCommedia_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Commedia.aspx");
-        }
-
-
     }
 }

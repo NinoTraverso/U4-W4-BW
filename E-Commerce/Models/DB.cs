@@ -151,7 +151,7 @@ namespace E_Commerce.Models
             conn.Close();
         }
 
-        public static void Insert(string title, string production, string category, string year, string duration, string firstActor,
+        public static void InsertFilm(string title, string production, string category, string year, string duration, string firstActor,
              double price, string fileNameBg, string fileNameCover, string fileNameImg1, string fileNameImg2, string fileNameImg3, string director, double rating)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
@@ -181,7 +181,7 @@ namespace E_Commerce.Models
 
             }
 
-            catch (Exception ex)
+            catch
             {
 
             }
@@ -205,6 +205,92 @@ namespace E_Commerce.Models
             cmd.ExecuteNonQuery();
 
             conn.Close();
-        }    
+        }
+
+        public static void SignIn(string name, string surname, string username, string password, string image)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO Users VALUES(@name, @surname, @username, @password, @role, @image)";
+                cmd.Parameters.AddWithValue("name", name);
+                cmd.Parameters.AddWithValue("surname", surname);
+                cmd.Parameters.AddWithValue("username", username);
+                cmd.Parameters.AddWithValue("password", password);
+                cmd.Parameters.AddWithValue("role", "user");
+                cmd.Parameters.AddWithValue("image", image);
+                int IsOk = cmd.ExecuteNonQuery();
+                
+            }
+
+            catch
+            {
+                
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public static User getUser(string username)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand("select * from Users where Username = @username", conn);
+            cmd.Parameters.AddWithValue("username", username);
+            SqlDataReader sqlDataReader;
+
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+
+            User user = new User();
+            while (sqlDataReader.Read())
+            {
+                user.Id = Convert.ToInt32(sqlDataReader["IdUser"]);
+                user.Name = sqlDataReader["Name"].ToString();
+                user.Surname = sqlDataReader["Surname"].ToString();
+                user.Username =sqlDataReader["Username"].ToString();
+                user.Password = sqlDataReader["Password"].ToString();
+                user.Role = sqlDataReader["Role"].ToString();
+                user.Image = sqlDataReader["ProfileImg"].ToString();
+            }
+
+            conn.Close();
+            return user;
+        }
+
+        public static List<User> getAllUsers()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand("select * from Users", conn);
+            SqlDataReader sqlDataReader;
+
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+
+            List<User> users = new List<User>();
+            while (sqlDataReader.Read())
+            {
+                User user = new User();
+                user.Id = Convert.ToInt32(sqlDataReader["IdUser"]);
+                user.Name = sqlDataReader["Name"].ToString();
+                user.Surname = sqlDataReader["Surname"].ToString();
+                user.Username = sqlDataReader["Username"].ToString();
+                user.Role = sqlDataReader["Role"].ToString();
+                user.Image = sqlDataReader["ProfileImg"].ToString();
+                users.Add(user);
+            }
+
+            conn.Close();
+            return users;
+        }
     }
 }

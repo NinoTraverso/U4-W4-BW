@@ -11,7 +11,7 @@ namespace E_Commerce
 {
 
 
-    public partial class Horror
+    public partial class Premium
     {
     }
 }
