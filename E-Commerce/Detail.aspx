@@ -30,17 +30,60 @@
                             <p class="card-text border-bottom" id="duration" runat="server"></p>
                         </div>
                         <div class="px-5">
-                            <asp:Image ID="Image1" runat="server" CssClass="w-25" />
-                            <asp:Image ID="Image2" runat="server" CssClass="w-25"/>
-                            <asp:Image ID="Image3" runat="server" CssClass="w-25"/>
+                            <h4 class="text-center">Immagini correlate</h4>
+                            <asp:ImageButton ID="Image1" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" />
+                            <asp:ImageButton ID="Image2" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo" />
+                            <asp:ImageButton ID="Image3" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo" />
                         </div>
 
-                        
+
                     </div>
                     <div class="card-footer text-body-secondary">
                         <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success " />
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bg-dark" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <asp:Image ID="ImageModal1" runat="server" CssClass="img-fluid" />
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bg-dark" id="exampleModal2" aria-labelledby="exampleModal2Label" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <asp:Image ID="ImageModal2" runat="server" CssClass="img-fluid" />
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bg-dark" id="exampleModal3" aria-labelledby="exampleModal3Label" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <asp:Image ID="ImageModaL3" runat="server" CssClass="img-fluid" />
+
+                </div>
+
             </div>
         </div>
     </div>

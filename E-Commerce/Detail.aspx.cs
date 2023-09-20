@@ -30,6 +30,7 @@ namespace E_Commerce
                 production.InnerText = $"Produttore: {film.Production}";
                 if(film.Img1 != "") {
                     Image1.ImageUrl = $"Content/assets/{film.Img1}";
+                    ImageModal1.ImageUrl = $"Content/assets/{film.Img1}";
                 }
                 else
                 {
@@ -38,6 +39,7 @@ namespace E_Commerce
                 if (film.Img2 != "")
                 {
                     Image2.ImageUrl = $"Content/assets/{film.Img2}";
+                    ImageModal2.ImageUrl = $"Content/assets/{film.Img2}";
                 }
                 else
                 {
@@ -46,6 +48,7 @@ namespace E_Commerce
                 if (film.Img3 != "")
                 {
                     Image3.ImageUrl = $"Content/assets/{film.Img3}";
+                    ImageModaL3.ImageUrl = $"Content/assets/{film.Img3}";
                 }
                 else
                 {
