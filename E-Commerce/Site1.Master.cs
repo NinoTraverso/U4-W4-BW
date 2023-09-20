@@ -31,6 +31,7 @@ namespace E_Commerce
                     loginButton.Text = "Login";
                     adminBtn.Visible = false;
                     signInButton.Visible = true;
+                    profileImg.Visible = false;
                 }
             }
         }
