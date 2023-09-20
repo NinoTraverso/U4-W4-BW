@@ -20,7 +20,7 @@
 
                     <div class="card-body">
                         <div class="px-5">
-                            <span id="badge" runat="server" class="badge text-bg-primary my-1"></span>
+                            <span id="badge" runat="server" ></span>
                             <p class="card-text border-bottom" id="year" runat="server"></p>
                             <p class="card-text border-bottom" id="director" runat="server"></p>
                             <p class="card-text border-bottom" id="production" runat="server"></p>
