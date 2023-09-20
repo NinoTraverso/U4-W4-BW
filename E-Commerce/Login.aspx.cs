@@ -24,6 +24,9 @@ namespace E_Commerce
                 && psw == ConfigurationManager.AppSettings["psw"])
             {
                 FormsAuthentication.SetAuthCookie(username.Text, false);
+                HttpCookie auth = new HttpCookie("username");
+                auth.Value = user;
+                Response.Cookies.Add(auth);
                 Response.Redirect(FormsAuthentication.DefaultUrl);
             }
             else errorMessage.Visible = true;
