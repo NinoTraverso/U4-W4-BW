@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -20,14 +21,14 @@ namespace E_Commerce
         {
             string user = username.Text;
             string psw = password.Text;
-            if (user == ConfigurationManager.AppSettings["user"]
-                && psw == ConfigurationManager.AppSettings["psw"])
+            User loggedUser = DB.getUser(user);
+            if (loggedUser != null && loggedUser.Password == psw && loggedUser.Role == "admin") {
+                FormsAuthentication.SetAuthCookie(username.Text, false);
+                Response.Redirect(FormsAuthentication.DefaultUrl);
+            } else if (loggedUser != null && loggedUser.Password == psw)
             {
                 FormsAuthentication.SetAuthCookie(username.Text, false);
-                HttpCookie auth = new HttpCookie("username");
-                auth.Value = user;
-                Response.Cookies.Add(auth);
-                Response.Redirect(FormsAuthentication.DefaultUrl);
+                Response.Redirect("Default.aspx");
             }
             else errorMessage.Visible = true;
         }

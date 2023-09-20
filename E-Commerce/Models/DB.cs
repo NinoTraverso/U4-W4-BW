@@ -256,6 +256,7 @@ namespace E_Commerce.Models
                 user.Name = sqlDataReader["Name"].ToString();
                 user.Surname = sqlDataReader["Surname"].ToString();
                 user.Username =sqlDataReader["Username"].ToString();
+                user.Password = sqlDataReader["Password"].ToString();
                 user.Role = sqlDataReader["Role"].ToString();
                 user.Image = sqlDataReader["ProfileImg"].ToString();
             }

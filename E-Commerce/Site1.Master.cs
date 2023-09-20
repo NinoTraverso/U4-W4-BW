@@ -16,11 +16,11 @@ namespace E_Commerce
         {
             if(!IsPostBack)
             {
-                if (Request.Cookies["username"] != null)
+                if (Request.Cookies[".ASPXAUTH"] != null)
                 {
                     loginButton.Text = "Logout";
                     signInButton.Visible = false;
-                    User user = DB.getUser(Request.Cookies["username"].Value);
+                    User user = DB.getUser(HttpContext.Current.User.Identity.Name);
                     if (user.Role == "admin") adminBtn.Visible = true;
                     else adminBtn.Visible = false;
                 }
@@ -39,7 +39,7 @@ namespace E_Commerce
             Response.Redirect(FormsAuthentication.LoginUrl);
             else
             {
-                Response.Cookies.Clear();
+                FormsAuthentication.SignOut();
                 Response.Redirect("Default.aspx");
             }
         }
