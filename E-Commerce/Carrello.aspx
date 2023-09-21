@@ -22,7 +22,7 @@
                                             <p class="card-text"><small> <%# Item.Price %>€</small></p>
                                         </div>
                                         <div class="d-flex flex-column gap-2">
-                                            <asp:Button ID="DeleteButton" CommandArgument="<%#Item.Id %>" runat="server" Text="Rimuovi dal carrello" CssClass="btn btn-danger" OnClick="DeleteButton_Click" />
+                                            <asp:Button ID="DeleteButton" CommandArgument="<%#Item.Id %>" runat="server" Text="Rimuovi dal carrello" CssClass="btn bottoneRed" OnClick="DeleteButton_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -37,6 +37,6 @@
     </div>
     <div class="d-flex flex-column align-items-center">
         <asp:Label ID="message" runat="server" Text="Carrello Vuoto!" CssClass="fw-bold fs-2"></asp:Label>
-        <asp:Button ID="SvuotaCarrello" runat="server" Text="Svuota Carrello" CssClass="btn btn-danger" OnClick="SvuotaCarrello_Click" />
+        <asp:Button ID="SvuotaCarrello" runat="server" Text="Svuota Carrello" CssClass="btn ancoraRed" OnClick="SvuotaCarrello_Click" />
     </div>
 </asp:Content>

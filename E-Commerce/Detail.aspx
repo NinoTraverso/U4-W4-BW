@@ -35,8 +35,8 @@
                             <asp:ImageButton ID="Image3" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo" />
                         </div>
                     </div>
-                    <div class="card-footer text-body-secondary">
-                        <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success" OnClick="AddCart_Click" />
+                    <div class="card-footer text-body-secondary text-center py-5">
+                        <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn bottone " OnClick="AddCart_Click" />
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
             <asp:Label ID="commentMessage" runat="server" Text="Effettua il Login per lasciare una Recensione" CssClass="alert alert-danger mx-auto text-center my-2 fw-bold w-50"></asp:Label>
                         <div class="col-8" id="commentContainer" runat="server">
                 <asp:TextBox ID="CommentBox" runat="server" CssClass="form-control w-100"></asp:TextBox>
-                <asp:Button ID="SendComment" runat="server" Text="Invia" CssClass="btn btn-success w-100 mt-1"  OnClick="SendComment_Click" />
+                <asp:Button ID="SendComment" runat="server" Text="Invia" CssClass="btn bottone w-100 mt-2"  OnClick="SendComment_Click" />
             </div>
         </div>
     </div>

@@ -23,8 +23,8 @@
                                             <p class="card-text"><small class="Anno Produzione"><%# Item.Year %></small></p>
                                         </div>
                                         <div class="d-flex flex-column gap-2">
-                                            <a href="ModFilm.aspx?id=<%#Item.Id %>" class="btn btn-warning">Modifica</a>
-                                            <asp:Button ID="DeleteButton" CommandArgument="<%#Item.Id %>" runat="server" Text="Elimina" CssClass="btn btn-danger" OnClick="DeleteButton_Click"/>
+                                            <a href="ModFilm.aspx?id=<%#Item.Id %>" class="btn ancoraYel">Modifica</a>
+                                            <asp:Button ID="DeleteButton" CommandArgument="<%#Item.Id %>" runat="server" Text="Elimina" CssClass="btn ancoraRed" OnClick="DeleteButton_Click"/>
                                         </div>
                                     </div>
                                 </div>
