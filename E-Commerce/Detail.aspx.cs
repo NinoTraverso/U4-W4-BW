@@ -82,19 +82,19 @@ namespace E_Commerce
                 }
                 if (film.Category == "Azione")
                 {
-                    badge.Attributes.Add("class", "badge text-bg-warning my-1");
+                    badge.Attributes.Add("class", "badge azione my-1");
                 }else if(film.Category == "Fantascienza")
                 {
-                    badge.Attributes.Add("class", "badge text-bg-success my-1");
+                    badge.Attributes.Add("class", "badge fantascienza my-1");
                 }else if(film.Category == "Horror")
                 {
-                    badge.Attributes.Add("class", "badge text-bg-danger my-1");
+                    badge.Attributes.Add("class", "badge horror my-1");
                 }else if(film.Category == "Fantasy")
                 {
-                    badge.Attributes.Add("class", "badge text-bg-primary my-1");
+                    badge.Attributes.Add("class", "badge fantasy my-1");
                 }else if(film.Category == "Commedia")
                 {
-                    badge.Attributes.Add("class", "badge text-bg-light my-1");
+                    badge.Attributes.Add("class", "badge commedia my-1");
                 }
                 badge.InnerText = film.Category;
 

@@ -12,6 +12,26 @@ header {
     height: 100px;
 }
 
+.azione {
+    background-color: #FF5733;
+}
+
+.fantascienza {
+    background-color: #00BFFF;
+}
+
+.horror {
+    background-color: #8B0000;
+}
+
+.fantasy {
+    background-color: #6A5ACD;
+}
+
+.commedia {
+    background-color: #FFD700;
+}
+
 .topArrow {
     position: fixed;
     right: 20px;
