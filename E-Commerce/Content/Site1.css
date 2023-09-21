@@ -14,7 +14,7 @@ body {
 
 .bottone {
     padding: 5px 15px;
-    background-color: #212529;
+    background-color: rgba(116, 116, 116, 0.19);
     color: #03e9f4;
     font-weight: bold;
     border: none;
@@ -35,7 +35,7 @@ body {
 .ancora {
     margin: 0 10px;
     padding: 10px 25px;
-    background-color: #212529;
+    background-color: rgba(116, 116, 116, 0.19);
     color: #03e9f4;
     font-weight: bold;
     border: none;
