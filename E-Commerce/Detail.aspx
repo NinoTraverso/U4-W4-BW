@@ -14,7 +14,7 @@
                             <asp:Image ID="ImageCover" runat="server" CssClass="position-absolute bottom-0 start-0 w-25 rounded-1 shadow-lg" />
                         </div>
                     </div>
-                    <div class="card-header text-center">
+                    <div class="card-header text-center glass mt-3">
                         <asp:Label ID="title" runat="server" CssClass="fs-2 fw-bold"></asp:Label>
                     </div>
                     <div class="card-body">
@@ -29,7 +29,7 @@
                             <p class="card-text border-bottom" id="duration" runat="server"></p>
                         </div>
                         <div class="px-5 text-center">
-                            <h4 class="text-center">Immagini correlate</h4>
+                            <h4 class="text-center glass mt-2">Immagini correlate</h4>
                             <asp:ImageButton ID="Image1" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" />
                             <asp:ImageButton ID="Image2" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo" />
                             <asp:ImageButton ID="Image3" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo" />
