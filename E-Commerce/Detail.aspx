@@ -8,16 +8,15 @@
         <div class="row justify-content-center">
             <div class="col-8">
                 <div class="card glass d-flex shadow-lg">
-                    <div class="card-header text-center">
-                        <asp:Label ID="title" runat="server" CssClass="fs-2 fw-bold"></asp:Label>
-                    </div>
                     <div class="position-relative px-5">
                         <asp:Image ID="backgroundImage" runat="server" CssClass="card-img-top" />
                         <div class="">
                             <asp:Image ID="ImageCover" runat="server" CssClass="position-absolute bottom-0 start-0 w-25 rounded-1 shadow-lg" />
                         </div>
                     </div>
-
+                    <div class="card-header text-center">
+                        <asp:Label ID="title" runat="server" CssClass="fs-2 fw-bold"></asp:Label>
+                    </div>
                     <div class="card-body">
                         <div class="px-5">
                             <span id="badge" runat="server"></span>
@@ -64,7 +63,7 @@
             </div>
         </div>
         <div class="row">
-                        <div class="col-12">
+            <div class="col-12">
                 <asp:TextBox ID="CommentBox" runat="server" CssClass="form-control w-100"></asp:TextBox>
                 <asp:Button ID="SendComment" runat="server" Text="Invia" CssClass="btn btn-success w-100" />
             </div>

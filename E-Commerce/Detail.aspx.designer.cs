@@ -24,15 +24,6 @@ namespace E_Commerce
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl container;
 
         /// <summary>
-        /// Controllo title.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label title;
-
-        /// <summary>
         /// Controllo backgroundImage.
         /// </summary>
         /// <remarks>
@@ -49,6 +40,15 @@ namespace E_Commerce
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImageCover;
+
+        /// <summary>
+        /// Controllo title.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label title;
 
         /// <summary>
         /// Controllo badge.
