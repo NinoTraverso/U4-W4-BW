@@ -28,7 +28,7 @@
                             <li>Disdici quando vuoi</li>
 
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Abbonati</button>
+                        <button type="button" class="w-100 m-0 btn ancora">Abbonati</button>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                             <li>Risparmia su abbonamento mensile</li>
 
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">Abbonati per 3 mesi</button>
+                        <button type="button" class="w-100 m-0 btn ancora">Abbonati per 3 mesi</button>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,9 @@
                             <li>15 GB di spazio in cloud</li>
                             <li>Supporto 4k</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">Abbonati per 1 anno</button>
+
+                        <button type="button" class="w-100 m-0 btn ancora">Abbonati per 1 anno</button>
+
                     </div>
                 </div>
             </div>

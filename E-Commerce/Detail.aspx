@@ -10,7 +10,7 @@
                 <div class="card glass d-flex shadow-lg">
                     <div class="position-relative px-5">
                         <asp:Image ID="backgroundImage" runat="server" CssClass="card-img-top" />
-                        <div class="">
+                        <div>
                             <asp:Image ID="ImageCover" runat="server" CssClass="position-absolute bottom-0 start-0 w-25 rounded-1 shadow-lg" />
                         </div>
                     </div>
@@ -28,15 +28,15 @@
                             <p class="card-text border-bottom" id="rating" runat="server"></p>
                             <p class="card-text border-bottom" id="duration" runat="server"></p>
                         </div>
-                        <div class="px-5">
+                        <div class="px-5 text-center">
                             <h4 class="text-center">Immagini correlate</h4>
                             <asp:ImageButton ID="Image1" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" />
                             <asp:ImageButton ID="Image2" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo" />
                             <asp:ImageButton ID="Image3" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo" />
                         </div>
                     </div>
-                    <div class="card-footer text-body-secondary">
-                        <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn btn-success" OnClick="AddCart_Click" />
+                    <div class="card-footer text-body-secondary text-center py-5">
+                        <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn bottone " OnClick="AddCart_Click" />
                     </div>
                 </div>
             </div>
@@ -45,18 +45,18 @@
         <div class="row justify-content-center mt-2">
             <div class="col-8">
                 <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
+                    <div class="accordion-item glass">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button collapsed ancora m-0 text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Reviews
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse bg-dark text-light" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body glass">
                                 <asp:Label ID="noReviewsMessage" runat="server" Text="Non sono presenti Recensioni!"></asp:Label>
                                 <asp:Repeater ID="reviewsRepeater" runat="server" ItemType="E_Commerce.Models.Review_User">
                                     <ItemTemplate>
-                                        <div class="row d-flex align-items-center my-2 glass">
+                                        <div class="row d-flex align-items-center my-2 glass text-light">
                                             <div class="col-2 d-flex flex-column align-items-center p-1">
                                                 <p class="fw-bold m-0"><%# Item.Username %></p>
                                                 <img src="Content/assets/<%# Item.ProfileImg %>" alt ="<%# Item.Username %>Avatar" class="w-25 rounded-circle" />
@@ -78,15 +78,15 @@
         </div>
         <div class="row justify-content-center mt-2">
             <asp:Label ID="commentMessage" runat="server" Text="Effettua il Login per lasciare una Recensione" CssClass="alert alert-danger mx-auto text-center my-2 fw-bold w-50"></asp:Label>
-                        <div class="col-8" id="commentContainer" runat="server">
+                        <div class="col-8 glass p-3" id="commentContainer" runat="server">
                 <asp:TextBox ID="CommentBox" runat="server" CssClass="form-control w-100"></asp:TextBox>
-                <asp:Button ID="SendComment" runat="server" Text="Invia" CssClass="btn btn-success w-100 mt-1"  OnClick="SendComment_Click" />
+                <asp:Button ID="SendComment" runat="server" Text="Invia" CssClass="btn bottone w-100 my-4"  OnClick="SendComment_Click" />
             </div>
         </div>
     </div>
-    <div class="modal fade bg-dark" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal fade glass" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-dark">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -98,9 +98,9 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bg-dark" id="exampleModal2" aria-labelledby="exampleModal2Label" aria-hidden="false">
+    <div class="modal fade glass" id="exampleModal2" aria-labelledby="exampleModal2Label" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-dark">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -112,9 +112,9 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bg-dark" id="exampleModal3" aria-labelledby="exampleModal3Label" aria-hidden="false">
+    <div class="modal fade glass" id="exampleModal3" aria-labelledby="exampleModal3Label" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-dark">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
