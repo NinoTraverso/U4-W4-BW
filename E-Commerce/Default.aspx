@@ -19,14 +19,14 @@
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body rounded-0">
+                    <div class="accordion-body">
                         <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
                             <asp:Repeater ID="RepeaterAzione" runat="server" ItemType="E_Commerce.Models.Film">
                                 <ItemTemplate>
                                     <div>
-                                        <div class="card text-bg-secondary m-3" style="width: 18rem;">
+                                        <div class="card text-bg-secondary m-3">
                                             <a href="Detail.aspx?idFilm=<%# Item.Id %>">
-                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
+                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top rounded-2" alt="<%# Item.Title %>">
                                             </a>
 
                                         </div>

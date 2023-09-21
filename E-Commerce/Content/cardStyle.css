@@ -25,11 +25,12 @@ header {
 body::-webkit-scrollbar {
     display: none;
 }
-.card,header,.accordion-body {
+.glass {
     background: rgba(116, 116, 116, 0.19);
-    border-radius: 16px;
+    border-radius: 5px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.5px);
     -webkit-backdrop-filter: blur(8.5px);
     border: 1px solid rgba(116, 116, 116, 0.14);
 }
+

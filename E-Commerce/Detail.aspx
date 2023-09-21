@@ -7,7 +7,7 @@
 
         <div class="row justify-content-center">
             <div class="col-8">
-                <div class="card d-flex shadow-lg">
+                <div class="card glass d-flex shadow-lg">
                     <div class="card-header text-center">
                         <asp:Label ID="title" runat="server" CssClass="fs-2 fw-bold"></asp:Label>
                     </div>
