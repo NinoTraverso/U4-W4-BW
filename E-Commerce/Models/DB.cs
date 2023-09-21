@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Commerce.Admin;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -373,6 +374,40 @@ namespace E_Commerce.Models
 
             conn.Close();
             return reviews;
+        }
+
+        public static List<Film> SearchFilm(string search)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand($"SELECT * FROM Films WHERE Title LIKE '%{search}%';", conn);
+            SqlDataReader sqlDataReader;
+            List<Film> filmsFound = new List<Film>();
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                Film film = new Film();
+                film.Id = Convert.ToInt32(sqlDataReader["IdFilm"]);
+                film.Title = sqlDataReader["Title"].ToString();
+                film.Director = sqlDataReader["Director"].ToString();
+                film.Price = Convert.ToDouble(sqlDataReader["Price"]);
+                film.Category = sqlDataReader["Category"].ToString();
+                film.Duration = sqlDataReader["Duration"].ToString();
+                film.Production = sqlDataReader["Production"].ToString();
+                film.FirstActor = sqlDataReader["FirstActor"].ToString();
+                film.Year = sqlDataReader["Year"].ToString();
+                film.Rating = Convert.ToDouble(sqlDataReader["Rating"]);
+                film.BackgroundImg = sqlDataReader["BackgroundImg"].ToString();
+                film.CoverImg = sqlDataReader["CoverImg"].ToString();
+                film.Img1 = sqlDataReader["Img1"].ToString();
+                film.Img2 = sqlDataReader["Img2"].ToString();
+                film.Img3 = sqlDataReader["Img3"].ToString();
+                filmsFound.Add(film);
+            }
+
+            conn.Close();
+            return filmsFound;
         }
     }
 }

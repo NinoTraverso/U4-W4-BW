@@ -10,7 +10,7 @@
                 <div class="card glass d-flex shadow-lg">
                     <div class="position-relative px-5">
                         <asp:Image ID="backgroundImage" runat="server" CssClass="card-img-top" />
-                        <div class="">
+                        <div>
                             <asp:Image ID="ImageCover" runat="server" CssClass="position-absolute bottom-0 start-0 w-25 rounded-1 shadow-lg" />
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                             <p class="card-text border-bottom" id="rating" runat="server"></p>
                             <p class="card-text border-bottom" id="duration" runat="server"></p>
                         </div>
-                        <div class="px-5">
+                        <div class="px-5 text-center">
                             <h4 class="text-center">Immagini correlate</h4>
                             <asp:ImageButton ID="Image1" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" />
                             <asp:ImageButton ID="Image2" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo" />
@@ -80,13 +80,13 @@
             <asp:Label ID="commentMessage" runat="server" Text="Effettua il Login per lasciare una Recensione" CssClass="alert alert-danger mx-auto text-center my-2 fw-bold w-50"></asp:Label>
                         <div class="col-8 glass p-3" id="commentContainer" runat="server">
                 <asp:TextBox ID="CommentBox" runat="server" CssClass="form-control w-100"></asp:TextBox>
-                <asp:Button ID="SendComment" runat="server" Text="Invia" CssClass="btn bottone w-100 mt-2"  OnClick="SendComment_Click" />
+                <asp:Button ID="SendComment" runat="server" Text="Invia" CssClass="btn bottone w-100 my-4"  OnClick="SendComment_Click" />
             </div>
         </div>
     </div>
-    <div class="modal fade bg-dark" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal fade glass" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-dark">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -98,9 +98,9 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bg-dark" id="exampleModal2" aria-labelledby="exampleModal2Label" aria-hidden="false">
+    <div class="modal fade glass" id="exampleModal2" aria-labelledby="exampleModal2Label" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-dark">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -112,9 +112,9 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bg-dark" id="exampleModal3" aria-labelledby="exampleModal3Label" aria-hidden="false">
+    <div class="modal fade glass" id="exampleModal3" aria-labelledby="exampleModal3Label" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-dark">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
