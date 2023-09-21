@@ -19,7 +19,7 @@
 
 <body class="text-bg-dark h-100" id="topPage">
     <form id="form1" runat="server" class="h-100">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3 mb-4 border-bottom position-fixed start-0 end-0 text-bg-dark">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3 mb-4 border-bottom position-fixed start-0 end-0 rounded-0">
             <div class="col-md-3 mb-2 mb-md-0">
                 <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
                     <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap">

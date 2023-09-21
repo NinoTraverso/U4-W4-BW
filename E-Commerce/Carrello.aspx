@@ -11,10 +11,10 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-2">
-                                    <img src="../Content/assets/<%# Item.CoverImg %>" class="w-100" alt="cover" />
+                                    <img src="../Content/assets/<%# Item.CoverImg %>" class="w-100 rounded-1" alt="cover" />
                                 </div>
                                 <div class="col-10 d-flex">
-                                    <div class="card-body bg-dark text-light d-flex gap-3 align-items-center justify-content-between">
+                                    <div class="card-body text-light d-flex gap-3 align-items-center justify-content-between">
                                         <div>
                                             <h5 class="card-title"><%# Item.Title %></h5>
                                             <p class="card-text"><%# Item.Production %></p>
