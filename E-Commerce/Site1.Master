@@ -22,7 +22,7 @@
             <div class="col-md-3 mb-2 mb-md-0">
                 <div class="d-flex gap-1">
                     <asp:TextBox ID="ToSearch" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:Button ID="ButtonSearch" runat="server" Text="Cerca" CssClass="btn ancora" OnClick="ButtonSearch_Click" />
+                    <asp:Button ID="ButtonSearch" runat="server" Text="Cerca    " CssClass="btn ancora" OnClick="ButtonSearch_Click" />
                 </div>
             </div>
 
