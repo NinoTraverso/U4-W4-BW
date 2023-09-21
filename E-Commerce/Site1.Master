@@ -2,15 +2,13 @@
 
 <!DOCTYPE html>
 
-<html>
+<html class="h-100">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link rel="stylesheet" href="Content/Site.css" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="Content/cardStyle.css" rel="stylesheet" />
-    <link href="Site1.css" rel="stylesheet" />
+    <link href="Content/Site1.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -19,7 +17,6 @@
 </head>
 
 <body class="text-bg-dark" id="topPage">
-  
     <form id="form1" runat="server">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3 mb-4 border-bottom position-fixed start-0 end-0 text-bg-dark">
             <div class="col-md-3 mb-2 mb-md-0">
@@ -53,8 +50,8 @@
         <div class="spacer"></div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-
         <div class="spacer"></div>
+
         <div id="footer" class="bg-dark">
             <h3 class="text-align-start mx-5">CodeBuster</h3>
             <div class="container">
@@ -124,9 +121,9 @@
                     Azioni disponibili
                 </div>
                 <div class="mt-3 d-flex flex-column gap-2 px-2">
-                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="btn btn-primary text-light">Gestisci film esistenti</asp:LinkButton>
-                    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" CssClass="btn btn-primary text-light">Inserisci un nuovo film</asp:LinkButton>
-                    <a href="#" class="btn btn-primary text-light">Visualizza utenti abbonati</a>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="btn glass text-light mybtn shadow-sm">Gestisci film esistenti</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" CssClass="btn glass text-light mybtn shadow-sm">Inserisci un nuovo film</asp:LinkButton>
+                    <a href="#" class="btn text-light glass mybtn shadow-sm">Visualizza utenti abbonati</a>
                 </div>
             </div>
         </div>

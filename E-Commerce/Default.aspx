@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
         <h3 class="fw-bold text-white text-center" id="title" runat="server">Interstellar</h3>
         <div class="d-flex justify-content-center preview-container position-relative w-100">
             <video autoplay muted id="video" runat="server" class="w-100" controls>
@@ -12,7 +11,7 @@
         </div>
 
 
-        <div class="accordion mt-3" id="accordionExample">
+        <div class="accordion m-3" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-warning fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -20,14 +19,14 @@
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                    <div class="accordion-body bg-dark">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center glass">
                             <asp:Repeater ID="RepeaterAzione" runat="server" ItemType="E_Commerce.Models.Film">
                                 <ItemTemplate>
                                     <div>
-                                        <div class="card text-bg-secondary m-3" style="width: 18rem;">
+                                        <div class="card text-bg-secondary m-3">
                                             <a href="Detail.aspx?idFilm=<%# Item.Id %>">
-                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top" alt="<%# Item.Title %>">
+                                                <img src="Content/assets/<%# Item.CoverImg %>" class="card-img-top rounded-2" alt="<%# Item.Title %>">
                                             </a>
 
                                         </div>
@@ -45,8 +44,8 @@
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                    <div class="accordion-body bg-dark">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center glass">
                             <asp:Repeater ID="RepeaterFantascienza" runat="server" ItemType="E_Commerce.Models.Film">
                                 <ItemTemplate>
                                     <div>
@@ -70,8 +69,8 @@
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                    <div class="accordion-body bg-dark">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center glass">
                             <asp:Repeater ID="RepeaterHorror" runat="server" ItemType="E_Commerce.Models.Film">
                                 <ItemTemplate>
                                     <div>
@@ -95,8 +94,8 @@
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                    <div class="accordion-body bg-dark">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center glass">
                             <asp:Repeater ID="RepeaterFantasy" runat="server" ItemType="E_Commerce.Models.Film">
                                 <ItemTemplate>
                                     <div>
@@ -120,8 +119,8 @@
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
+                    <div class="accordion-body bg-dark">
+                        <div class="row row-cols-3 row-cols-lg-4 justify-content-center glass">
                             <asp:Repeater ID="RepeaterCommedia" runat="server" ItemType="E_Commerce.Models.Film">
                                 <ItemTemplate>
                                     <div>
@@ -141,5 +140,4 @@
         </div>
 
         <a href="#topPage" class="topArrow"><i class="fa-solid fa-arrow-up"></i></a>
-    </div>
 </asp:Content>
