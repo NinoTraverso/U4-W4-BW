@@ -237,7 +237,7 @@ namespace E_Commerce.Models
                 conn.Close();
             }
         }
-        public static User getUser(string username)
+        public static User getUserByUsername(string username)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
@@ -256,6 +256,34 @@ namespace E_Commerce.Models
                 user.Name = sqlDataReader["Name"].ToString();
                 user.Surname = sqlDataReader["Surname"].ToString();
                 user.Username =sqlDataReader["Username"].ToString();
+                user.Password = sqlDataReader["Password"].ToString();
+                user.Role = sqlDataReader["Role"].ToString();
+                user.Image = sqlDataReader["ProfileImg"].ToString();
+            }
+
+            conn.Close();
+            return user;
+        }
+
+        public static User getUserById(int id)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand("select * from Users where IdUser = @id", conn);
+            cmd.Parameters.AddWithValue("IdUser", id);
+            SqlDataReader sqlDataReader;
+
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+
+            User user = new User();
+            while (sqlDataReader.Read())
+            {
+                user.Id = Convert.ToInt32(sqlDataReader["IdUser"]);
+                user.Name = sqlDataReader["Name"].ToString();
+                user.Surname = sqlDataReader["Surname"].ToString();
+                user.Username = sqlDataReader["Username"].ToString();
                 user.Password = sqlDataReader["Password"].ToString();
                 user.Role = sqlDataReader["Role"].ToString();
                 user.Image = sqlDataReader["ProfileImg"].ToString();
@@ -291,6 +319,60 @@ namespace E_Commerce.Models
 
             conn.Close();
             return users;
+        }
+
+        public static void writeReview(string text, int idFilm, int idUser)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ConnectionString.ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO Reviews VALUES(@text, @idFilm, @idUser)";
+                cmd.Parameters.AddWithValue("text", text);
+                cmd.Parameters.AddWithValue("idFilm", idFilm);
+                cmd.Parameters.AddWithValue("idUser", idUser);
+                int IsOk = cmd.ExecuteNonQuery();
+
+            }
+
+            catch
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static List<Review_User> getAllReviewsByIdFilm(int idFilm)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand("SELECT Commento, Username, ProfileImg, IdFilm FROM Reviews INNER JOIN Users ON Reviews.IdUser = Users.IdUser WHERE IdFilm = @idFilm;", conn);
+            cmd.Parameters.AddWithValue("idFilm", idFilm);
+            SqlDataReader sqlDataReader;
+
+            conn.Open();
+            sqlDataReader = cmd.ExecuteReader();
+
+            List<Review_User> reviews = new List<Review_User>();
+            while (sqlDataReader.Read())
+            {
+                Review_User review = new Review_User();
+                review.Text = sqlDataReader["Commento"].ToString();
+                review.Username = sqlDataReader["Username"].ToString();
+                review.ProfileImg = sqlDataReader["ProfileImg"].ToString();
+                reviews.Add(review);
+            }
+
+            conn.Close();
+            return reviews;
         }
     }
 }

@@ -13,11 +13,26 @@ namespace E_Commerce
     {
         int id;
         List<Film> carrello = new List<Film>();
+        User user;
+        string review;
         protected void Page_Load(object sender, EventArgs e)
         {
+            noReviewsMessage.Visible = false;
             if (Request.Cookies[".ASPXAUTH"] == null)
+            {
                 AddCart.Text = "Effettua il Login per acquistare";
-            else AddCart.Text = "Metti nel Carrello";
+                commentContainer.Visible = false;
+                commentMessage.Visible = true;
+            }
+            else
+            {
+                commentContainer.Visible = true;
+                commentMessage.Visible = false;
+                AddCart.Text = "Metti nel Carrello";
+                string username = HttpContext.Current.User.Identity.Name;
+                id = Convert.ToInt32(Request.QueryString["idFilm"]);
+                user = DB.getUserByUsername(username);
+            }
             
             if (Session["Carrello"] != null)
             {
@@ -25,6 +40,7 @@ namespace E_Commerce
             }
             if (!IsPostBack)
             {
+                review = CommentBox.Text;
                 id = Convert.ToInt32(Request.QueryString["idFilm"]);
                 Film film = DB.getFilmById(id);
 
@@ -81,6 +97,16 @@ namespace E_Commerce
                     badge.Attributes.Add("class", "badge text-bg-light my-1");
                 }
                 badge.InnerText = film.Category;
+
+                List<Review_User> reviewUser = new List<Review_User> ();
+                reviewUser = DB.getAllReviewsByIdFilm(id);
+                if (reviewUser.Count != 0)
+                {
+                    reviewsRepeater.DataSource = reviewUser;
+                    reviewsRepeater.DataBind();
+                    noReviewsMessage.Visible = false;
+                }
+                else noReviewsMessage.Visible = true;
             }
         }
 
@@ -95,6 +121,13 @@ namespace E_Commerce
                 Response.Redirect("Default.aspx");
             }
             else Response.Redirect("Login.aspx");
+        }
+
+        protected void SendComment_Click(object sender, EventArgs e)
+        {
+            string review = CommentBox.Text;
+            DB.writeReview(review, id, user.Id);
+            Response.Redirect($"Default.aspx");
         }
     }
 }

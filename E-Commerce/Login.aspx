@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="d-flex flex-column align-items-center">
+    <div class="d-flex flex-column align-items-center bg-primary bg-opacity-25 w-25 mx-auto pt-4 pb-3 rounded">
         <h3>Effettua l'accesso!</h3>
         <label for="username" class="mt-2">Username:</label>
         <asp:TextBox ID="username" runat="server"></asp:TextBox>

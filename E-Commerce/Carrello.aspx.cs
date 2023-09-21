@@ -19,7 +19,7 @@ namespace E_Commerce
             if(carrello != null && carrello.Count > 0)
             {
                 foreach (Film film in carrello) tot += film.Price;
-                totale.InnerText = $"Totale: ${tot}";
+                totale.InnerText = $"Totale: {String.Format("{0:0.00 €}",tot)}";
                 message.Visible = false;
                 SvuotaCarrello.Visible = true;
                 Repeater1.DataSource = carrello;
