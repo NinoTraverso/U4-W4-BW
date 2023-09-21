@@ -31,7 +31,7 @@ namespace E_Commerce
                 AddCart.Text = "Metti nel Carrello";
                 string username = HttpContext.Current.User.Identity.Name;
                 id = Convert.ToInt32(Request.QueryString["idFilm"]);
-                user = DB.getUser(username);
+                user = DB.getUserByUsername(username);
             }
             
             if (Session["Carrello"] != null)

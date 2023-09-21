@@ -237,7 +237,7 @@ namespace E_Commerce.Models
                 conn.Close();
             }
         }
-        public static User getUser(string username)
+        public static User getUserByUsername(string username)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
