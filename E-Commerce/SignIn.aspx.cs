@@ -20,7 +20,7 @@ namespace E_Commerce
         {
             List<User> users = DB.getAllUsers();
 
-            User user = DB.getUser(username.Text);
+            User user = DB.getUserByUsername(username.Text);
             if (user == null) {
                 string filename = "";
                 if (avatar.HasFile)
