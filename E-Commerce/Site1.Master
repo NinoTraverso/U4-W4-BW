@@ -40,7 +40,7 @@
 
 
             <div class="col-md-3 text-end d-flex align-items-center">
-                <asp:Image ID="profileImg" runat="server" CssClass=" ancora rounded-circle p-2" Height="32"  />
+                <asp:Image ID="profileImg" runat="server" CssClass="rounded-circle" Height="32"  />
                 <asp:Button ID="premiumButton" runat="server" CssClass="ancora p-2"  Text="Abbonati!" OnClick="premium_Click" />
                 <asp:Button ID="loginButton" class=" ancora p-2" runat="server" Text="Login" OnClick="loginButton_Click" />
                 <asp:Button ID="signInButton" runat="server" Text="Sign In" CssClass="ancora p-2" OnClick="signInButton_Click" />
