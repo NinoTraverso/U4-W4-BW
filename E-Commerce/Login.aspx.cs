@@ -21,7 +21,7 @@ namespace E_Commerce
         {
             string user = username.Text;
             string psw = password.Text;
-            User loggedUser = DB.getUser(user);
+            User loggedUser = DB.getUserByUsername(user);
             if (loggedUser != null && loggedUser.Password == psw && loggedUser.Role == "admin") {
                 FormsAuthentication.SetAuthCookie(username.Text, false);
                 Response.Redirect(FormsAuthentication.DefaultUrl);
