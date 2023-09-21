@@ -29,10 +29,10 @@
 
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center align-items-center mb-md-0">
-                <li><a  href="../Default.aspx" class="bottone nav-link px-3 link-light">HOME</a></li>
-                <li><a  href="../Carrello.aspx" class="bottone nav-link link-light px-3">CARRELLO</a></li>
+                <li><a  href="../Default.aspx" class="ancora nav-link px-3 link-light">HOME</a></li>
+                <li><a  href="../Carrello.aspx" class="ancora nav-link link-light px-3">CARRELLO</a></li>
                 <li>
-                    <button class="btn bottone" id="adminBtn" runat="server" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <button class="btn ancora" id="adminBtn" runat="server" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         Area Admin
                     </button>
                 </li>
@@ -40,10 +40,10 @@
 
 
             <div class="col-md-3 text-end d-flex align-items-center">
-                <asp:Image ID="profileImg" runat="server" CssClass=" bottone rounded-circle p-2" Height="32"  />
-                <asp:Button ID="premiumButton" runat="server" CssClass="bottone p-2"  Text="Abbonati!" OnClick="premium_Click" />
-                <asp:Button ID="loginButton" class=" bottone p-2" runat="server" Text="Login" OnClick="loginButton_Click" />
-                <asp:Button ID="signInButton" runat="server" Text="Sign In" CssClass="bottone p-2" OnClick="signInButton_Click" />
+                <asp:Image ID="profileImg" runat="server" CssClass=" ancora rounded-circle p-2" Height="32"  />
+                <asp:Button ID="premiumButton" runat="server" CssClass="ancora p-2"  Text="Abbonati!" OnClick="premium_Click" />
+                <asp:Button ID="loginButton" class=" ancora p-2" runat="server" Text="Login" OnClick="loginButton_Click" />
+                <asp:Button ID="signInButton" runat="server" Text="Sign In" CssClass="ancora p-2" OnClick="signInButton_Click" />
             </div>
         </header>
 
