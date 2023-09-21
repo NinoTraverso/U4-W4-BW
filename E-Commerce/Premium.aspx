@@ -16,12 +16,12 @@
         </div>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             <div class="col">
-                <div class="card bg-dark mb-4 rounded-3 shadow-sm">
+                <div class="card glass mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-3">
                         <h4 class="my-0 fw-normal">1 Mese</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$6<small class="text-body-secondary fw-light">/mo</small></h1>
+                        <h1 class="card-title pricing-card-title">€6<small class="text-body-secondary fw-light">/mese</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>Accedi ad un vasto catalogo di film online</li>
                             <li>Risoluzione FullHd</li>
@@ -33,12 +33,12 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card bg-dark mb-4 rounded-3 shadow-sm">
+                <div class="card glass mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-3">
                         <h4 class="my-0 fw-normal">3 Mesi</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$4<small class="text-body-secondary fw-light">/mo</small></h1>
+                        <h1 class="card-title pricing-card-title">€4<small class="text-body-secondary fw-light">/mese</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>Accedi ad un vasto catalogo di film online</li>
                             <li>Risoluzione FullHd</li>
@@ -50,18 +50,18 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card bg-dark mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card glass mb-4 rounded-3 shadow-sm">
                     <div class="card-header py-3 text-bg-primary border-primary">
-                        <h4 class="my-0 fw-normal">Pro</h4>
+                        <h4 class="my-0 fw-normal">Annuale</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                        <h1 class="card-title pricing-card-title">€35<small class="text-body-secondary fw-light">/Anno</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>Fino a 3 utenti contemporaneamente</li>
                             <li>15 GB di spazio in cloud</li>
                             <li>Supporto 4k</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">Diventa Pro</button>
+                        <button type="button" class="w-100 btn btn-lg btn-primary">Abbonati per 1 anno</button>
                     </div>
                 </div>
             </div>
