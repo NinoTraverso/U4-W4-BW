@@ -237,7 +237,7 @@ namespace E_Commerce.Models
                 conn.Close();
             }
         }
-        public static User getUserByUsername(string username)
+        public static User getUser(string username)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
@@ -349,25 +349,25 @@ namespace E_Commerce.Models
             }
         }
 
-        public static List<Review> getAllReviewsByIdFilm(int idFilm)
+        public static List<Review_User> getAllReviewsByIdFilm(int idFilm)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
 
-            SqlCommand cmd = new SqlCommand("select * from Reviews where idFilm = @idFilm", conn);
+            SqlCommand cmd = new SqlCommand("SELECT Commento, Username, ProfileImg, IdFilm FROM Reviews INNER JOIN Users ON Reviews.IdUser = Users.IdUser WHERE IdFilm = @idFilm;", conn);
             cmd.Parameters.AddWithValue("idFilm", idFilm);
             SqlDataReader sqlDataReader;
 
             conn.Open();
             sqlDataReader = cmd.ExecuteReader();
 
-            List<Review> reviews = new List<Review>();
+            List<Review_User> reviews = new List<Review_User>();
             while (sqlDataReader.Read())
             {
-                Review review = new Review();
-                review.Commento = sqlDataReader["Commento"].ToString();
-                review.IdUser = Convert.ToInt32(sqlDataReader["IdUser"]);
-                review.IdFilm = Convert.ToInt32(sqlDataReader["IdFilm"]);
+                Review_User review = new Review_User();
+                review.Text = sqlDataReader["Commento"].ToString();
+                review.Username = sqlDataReader["Username"].ToString();
+                review.ProfileImg = sqlDataReader["ProfileImg"].ToString();
                 reviews.Add(review);
             }
 

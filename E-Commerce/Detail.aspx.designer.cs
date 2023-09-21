@@ -159,6 +159,42 @@ namespace E_Commerce
         protected global::System.Web.UI.WebControls.Button AddCart;
 
         /// <summary>
+        /// Controllo noReviewsMessage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label noReviewsMessage;
+
+        /// <summary>
+        /// Controllo reviewsRepeater.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater reviewsRepeater;
+
+        /// <summary>
+        /// Controllo commentMessage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label commentMessage;
+
+        /// <summary>
+        /// Controllo commentContainer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl commentContainer;
+
+        /// <summary>
         /// Controllo CommentBox.
         /// </summary>
         /// <remarks>

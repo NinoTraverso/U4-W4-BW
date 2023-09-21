@@ -238,6 +238,7 @@
     </Compile>
     <Compile Include="Models\DB.cs" />
     <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\Review-User.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Premium.aspx.cs">
