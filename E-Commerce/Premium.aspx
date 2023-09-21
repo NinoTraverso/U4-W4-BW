@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <div class="pricing-header p-3 pb-md-4 mx-auto text-center glass mb-4">
                     <h1 class="display-4 fw-normal text-body-emphasis">Sottoscrivi un abbonamento</h1>
                     <p class="fs-5 text-body-secondary">
                         Migliaia di film di ogni genere pronti per essere guardati in streaming o per essere scaricati sul proprio dispositivo, abbonati subito per accedere al catalogo.

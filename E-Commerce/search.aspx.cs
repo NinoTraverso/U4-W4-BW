@@ -17,10 +17,13 @@ namespace E_Commerce
                 if (Request.QueryString["query"] != null)
                 {
                     string query = Request.QueryString["query"].ToString();
-                    List<Film> FilmsFound = new List<Film>();
-                    FilmsFound = DB.SearchFilm(query);
-                    RepeaterFound.DataSource = FilmsFound;
-                    RepeaterFound.DataBind();
+                    List<Film> FilmsFound = DB.SearchFilm(query);
+                    if (FilmsFound.Count > 0)
+                    {
+                        messageRow.Visible = false;
+                        RepeaterFound.DataSource = FilmsFound;
+                        RepeaterFound.DataBind();
+                    }
                 }
             }
         }
