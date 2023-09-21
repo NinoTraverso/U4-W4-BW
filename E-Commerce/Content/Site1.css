@@ -15,7 +15,7 @@ body {
 
 .bottone {
     padding: 5px 15px;
-    background-color: rgb(101, 101, 101, 0,90);
+    background-color: rgba(101, 101, 101, 0,90);
     color: #03e9f4;
     font-weight: bold;
     border: none;
@@ -57,19 +57,18 @@ body {
 .ancoraRed {
     margin: 0 10px;
     padding: 10px 25px;
-    background-color: rgb(226, 1, 1);
+    background-color: rgba(101, 101, 101, 0,90);
     color: white;
     font-weight: bold;
-    border: none;
+    border: 1px solid grey;
     border-radius: 2px;
     letter-spacing: 3px;
     overflow: hidden;
     transition: 0.4s;
     cursor: pointer;
-
 }
 .ancoraRed:hover {
-    background-color:darkred;
+    background-color:red;
     color: white;
     box-shadow: 0 0 5px red, 0 0 5px red, 0 0 25px red, 0 0 50px red;
     -webkit-box-reflect: below 1px(transparent, #0005);
@@ -77,10 +76,10 @@ body {
 .ancoraYel {
     margin: 0 10px;
     padding: 10px 25px;
-    background-color: yellow;
+    background-color: rgba(101, 101, 101, 0,90);
     color: white;
     font-weight: bold;
-    border: none;
+    border: 1px solid grey;
     border-radius: 2px;
     letter-spacing: 3px;
     overflow: hidden;
@@ -89,17 +88,17 @@ body {
 }
 
     .ancoraYel:hover {
-        background-color: darkkhaki;
+        background-color: yellow;
         color: white;
         box-shadow: 0 0 5px yellow, 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow;
         -webkit-box-reflect: below 1px(transparent, #0005);
     }
 .bottoneRed {
     padding: 5px 15px;
-    background-color: red;
+    background-color: rgba(101, 101, 101, 0,90);
     color: white;
     font-weight: bold;
-    border: none;
+    border: 1px solid grey;
     border-radius: 2px;
     letter-spacing: 3px;
     overflow: hidden;
