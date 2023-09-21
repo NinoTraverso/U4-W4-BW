@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:TextBox ID="ToSearch" runat="server"></asp:TextBox>
-    <asp:Button ID="Button1" runat="server" Text="Cerca" OnClick="Button1_Click" />
+
 
     <asp:Repeater ID="RepeaterFound" runat="server" ItemType="E_Commerce.Models.Film">
 <ItemTemplate>

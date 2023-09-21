@@ -25,10 +25,6 @@ namespace E_Commerce
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            string query = ToSearch.Text;
-            Response.Redirect($"search.aspx?query={query}");
-        }
+
     }
 }

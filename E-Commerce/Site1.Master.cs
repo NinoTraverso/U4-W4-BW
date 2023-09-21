@@ -67,5 +67,11 @@ namespace E_Commerce
         {
             Response.Redirect("SignIn.aspx");
         }
+
+        protected void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            string query = ToSearch.Text;
+            Response.Redirect($"~/search.aspx?query={query}");
+        }
     }
 }

@@ -12,7 +12,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-    
+
 
 </head>
 
@@ -20,17 +20,17 @@
     <form id="form1" runat="server">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3 mb-4 position-fixed start-0 end-0 glass">
             <div class="col-md-3 mb-2 mb-md-0">
-                <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap">
-                    </svg>
-                </a>
+                <div class="d-flex gap-1">
+                    <asp:TextBox ID="ToSearch" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:Button ID="ButtonSearch" runat="server" Text="Cerca" CssClass="btn ancora" OnClick="ButtonSearch_Click" />
+                </div>
             </div>
 
 
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center align-items-center mb-md-0">
-                <li><a  href="../Default.aspx" class="ancora nav-link px-3 link-light">HOME</a></li>
-                <li><a  href="../Carrello.aspx" class="ancora nav-link link-light px-3">CARRELLO</a></li>
+                <li><a href="../Default.aspx" class="ancora nav-link px-3 link-light">HOME</a></li>
+                <li><a href="../Carrello.aspx" class="ancora nav-link link-light px-3">CARRELLO</a></li>
                 <li>
                     <button class="btn ancora" id="adminBtn" runat="server" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         Area Admin
@@ -40,8 +40,8 @@
 
 
             <div class="col-md-3 text-end d-flex align-items-center">
-                <asp:Image ID="profileImg" runat="server" CssClass="rounded-circle" Height="32"  />
-                <asp:Button ID="premiumButton" runat="server" CssClass="ancora p-2"  Text="Abbonati!" OnClick="premium_Click" />
+                <asp:Image ID="profileImg" runat="server" CssClass="rounded-circle" Height="32" />
+                <asp:Button ID="premiumButton" runat="server" CssClass="ancora p-2" Text="Abbonati!" OnClick="premium_Click" />
                 <asp:Button ID="loginButton" class=" ancora p-2" runat="server" Text="Login" OnClick="loginButton_Click" />
                 <asp:Button ID="signInButton" runat="server" Text="Sign In" CssClass="ancora p-2" OnClick="signInButton_Click" />
             </div>
