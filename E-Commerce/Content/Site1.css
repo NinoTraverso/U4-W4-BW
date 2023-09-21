@@ -10,11 +10,12 @@ body {
     align-items: center;
     background: #050801;
     font-family: 'Raleway', sans-serif;
+    background-image: url("../Content/assets/bodybg.jpg");
 }
 
 .bottone {
     padding: 5px 15px;
-    background-color: rgba(116, 116, 116, 0.19);
+    background-color: rgb(101, 101, 101, 0,90);
     color: #03e9f4;
     font-weight: bold;
     border: none;
