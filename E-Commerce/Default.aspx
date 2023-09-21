@@ -19,7 +19,7 @@
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    <div class="accordion-body rounded-0">
                         <div class="row row-cols-3 row-cols-lg-4 justify-content-center">
                             <asp:Repeater ID="RepeaterAzione" runat="server" ItemType="E_Commerce.Models.Film">
                                 <ItemTemplate>
