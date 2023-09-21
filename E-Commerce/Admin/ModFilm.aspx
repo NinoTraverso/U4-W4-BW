@@ -4,9 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <div class="row">
+        <div class="row glass">
             <div class="col-12 text-center">
-                <h2>Inserisci un nuovo Film</h2>
+                <h2 id="header" runat="server"></h2>
                 <div id="alert" runat="server" class="alert alert-success alert-dismissible fade show mt-5" role="alert">
                     <strong>Ottimo!</strong> Film Modificato con successo
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" runat="server" id="btn"></button>
@@ -69,8 +69,8 @@
                 <asp:FileUpload ID="Img3Upload" runat="server" CssClass="form-control" />
             </div>
             <div class="col-12 d-flex justify-content-center">
-                <asp:Button ID="ModifyButton" runat="server" Text="Modifica" CssClass="btn btn-outline-success my-5 w-50" OnClick="ModifyButton_Click" />
-                <asp:Button ID="InsertButton" runat="server" Text="Inserisci" CssClass="btn btn-outline-success my-5 w-50" OnClick="InsertButton_Click" />
+                <asp:Button ID="ModifyButton" runat="server" Text="Modifica" CssClass="btn bottone my-5 w-50" OnClick="ModifyButton_Click" />
+                <asp:Button ID="InsertButton" runat="server" Text="Inserisci" CssClass="btn bottone my-5 w-50" OnClick="InsertButton_Click" />
             </div>
 
         </div>

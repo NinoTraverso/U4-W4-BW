@@ -14,10 +14,12 @@ namespace E_Commerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            header.InnerText = "Inserisci un nuovo film";
             alert.Visible = false;
             if (Request.QueryString["id"] != null)
             {
-                if(!IsPostBack)
+                header.InnerText = "Modifica film";
+                if (!IsPostBack)
                 {
                     InsertButton.Visible = false;
                     Film film = DB.getFilmById(Convert.ToInt32(Request.QueryString["id"]));
