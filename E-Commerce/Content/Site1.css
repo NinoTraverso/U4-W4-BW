@@ -42,7 +42,6 @@ body {
     border: none;
     border-radius: 2px;
     letter-spacing: 3px;
-    overflow: hidden;
     transition: 0.4s;
     cursor: pointer;
 }

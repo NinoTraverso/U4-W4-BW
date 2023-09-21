@@ -18,11 +18,11 @@
 
 <body class="text-bg-dark" id="topPage">
     <form id="form1" runat="server">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3 mb-4 position-fixed start-0 end-0 glass">
+        <header class="d-flex align-items-center justify-content-center justify-content-md-between p-3 mb-4 position-fixed start-0 end-0 glass fs-6">
             <div class="col-md-3 mb-2 mb-md-0">
                 <div class="d-flex gap-1">
                     <asp:TextBox ID="ToSearch" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:Button ID="ButtonSearch" runat="server" Text="Cerca    " CssClass="btn ancora" OnClick="ButtonSearch_Click" />
+                    <asp:Button ID="ButtonSearch" runat="server" Text="Cerca" CssClass="btn ancora" OnClick="ButtonSearch_Click" />
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
             </ul>
 
 
-            <div class="col-md-3 text-end d-flex align-items-center">
+            <div class="col-md-4 text-end d-flex align-items-center justify-content-center">
                 <asp:Image ID="profileImg" runat="server" CssClass="rounded-circle" Height="32" />
                 <asp:Button ID="premiumButton" runat="server" CssClass="ancora p-2" Text="Abbonati!" OnClick="premium_Click" />
                 <asp:Button ID="loginButton" class=" ancora p-2" runat="server" Text="Login" OnClick="loginButton_Click" />
