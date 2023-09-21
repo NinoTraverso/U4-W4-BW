@@ -10,14 +10,16 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="Content/cardStyle.css" rel="stylesheet" />
+    <link href="Site1.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-
+    
 
 </head>
 
 <body class="text-bg-dark" id="topPage">
+  
     <form id="form1" runat="server">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3 mb-4 border-bottom position-fixed start-0 end-0 text-bg-dark">
             <div class="col-md-3 mb-2 mb-md-0">
@@ -30,8 +32,8 @@
 
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center align-items-center mb-md-0">
-                <li><a href="../Default.aspx" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="../Carrello.aspx" class="nav-link px-2">Carrello</a></li>
+                <li><a  href="../Default.aspx" class="ancora nav-link px-3 link-light">HOME</a></li>
+                <li><a  href="../Carrello.aspx" class="ancora nav-link link-light px-3">CARRELLO</a></li>
                 <li>
                     <button class="btn btn-primary" id="adminBtn" runat="server" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         Area Admin
@@ -41,10 +43,10 @@
 
 
             <div class="col-md-3 text-end">
-                <asp:Image ID="profileImg" runat="server" CssClass="rounded-circle" Height="32"  />
-                <asp:Button ID="premiumButton" runat="server" CssClass="btn btn-success" Text="Abbonati!" OnClick="premium_Click" />
-                <asp:Button ID="loginButton" class="btn btn-primary" runat="server" Text="Login" OnClick="loginButton_Click" />
-                <asp:Button ID="signInButton" runat="server" Text="Sign In" CssClass="btn btn-primary" OnClick="signInButton_Click" />
+                <asp:Image ID="profileImg" runat="server" CssClass=" bottone rounded-circle m-2" Height="32"  />
+                <asp:Button ID="premiumButton" runat="server" CssClass="bottone   m-2"  Text="Abbonati!" OnClick="premium_Click" />
+                <asp:Button ID="loginButton" class=" bottone   m-2" runat="server" Text="Login" OnClick="loginButton_Click" />
+                <asp:Button ID="signInButton" runat="server" Text="Sign In" CssClass="bottone  m-2" OnClick="signInButton_Click" />
             </div>
         </header>
 
