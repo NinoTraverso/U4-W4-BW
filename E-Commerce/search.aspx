@@ -18,7 +18,9 @@
                         <div class="card glass mb-3">
                             <div class="row g-0 glass">
                                 <div class="col-2">
-                                    <img src="../Content/assets/<%# Item.CoverImg %>" class="w-100 rounded-1" alt="cover" />
+                                    <a href="Detail.aspx?IdFilm=<%# Item.Id %>">
+                                        <img src="../Content/assets/<%# Item.CoverImg %>" class="w-100 rounded-1" alt="cover" />
+                                    </a>
                                 </div>
                                 <div class="col-10 d-flex">
                                     <div class="card-body text-light d-flex gap-3 align-items-center justify-content-between">
