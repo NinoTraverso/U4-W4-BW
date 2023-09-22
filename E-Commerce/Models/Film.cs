@@ -24,6 +24,8 @@ namespace E_Commerce.Models
         public string Director { get; set; }
         public double Rating { get; set; }
 
+        public string Language;
+
         public Film() { }
 
         public Film(string title, string production, string category, string year, string duration, string firstActor, double price, string backgroundImg, string coverImg, string director, double rating)

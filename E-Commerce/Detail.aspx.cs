@@ -116,6 +116,7 @@ namespace E_Commerce
             {
                 id = Convert.ToInt32(Request.QueryString["idFilm"]);
                 Film selectedFilm = DB.getFilmById(id);
+                selectedFilm.Language = language.SelectedValue;
                 carrello.Add(selectedFilm);
                 Session["Carrello"] = carrello;
                 Response.Redirect("Default.aspx");

@@ -18,8 +18,9 @@
                                         <div>
                                             <h5 class="card-title"><%# Item.Title %></h5>
                                             <p class="card-text"><%# Item.Production %></p>
-                                            <p class="card-text"><small class="Anno Produzione"><%# Item.Year %></small></p>
-                                            <p class="card-text"><small><%# Item.Price %>€</small></p>
+                                            <p class="card-text"><small class="Anno Produzione">Anno: <%# Item.Year %></small></p>
+                                            <p class="card-text"><small>Lingua Selezionata: <%# Item.Language %></small></p>
+                                            <p class="card-text"><small>Prezzo: <%# Item.Price %>€</small></p>
                                         </div>
                                         <div class="d-flex flex-column gap-2">
                                             <asp:Button ID="DeleteButton" CommandArgument="<%#Item.Id %>" runat="server" Text="Rimuovi dal carrello" CssClass="btn bottoneRed" OnClick="DeleteButton_Click" />

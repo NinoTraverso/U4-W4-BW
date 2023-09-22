@@ -150,6 +150,15 @@ namespace E_Commerce
         protected global::System.Web.UI.WebControls.ImageButton Image3;
 
         /// <summary>
+        /// Controllo language.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList language;
+
+        /// <summary>
         /// Controllo AddCart.
         /// </summary>
         /// <remarks>

@@ -36,6 +36,13 @@
                         </div>
                     </div>
                     <div class="card-footer text-body-secondary text-center py-5">
+                        <asp:DropDownList ID="language" runat="server">
+                            <asp:ListItem Value="Italiano" Text="Italiano"></asp:ListItem> 
+                            <asp:ListItem Value="English" Text="English"></asp:ListItem> 
+                            <asp:ListItem Value="German" Text="German"></asp:ListItem> 
+                            <asp:ListItem Value="Spanish" Text="Spanish"></asp:ListItem> 
+                            <asp:ListItem Value="French" Text="French"></asp:ListItem> 
+                        </asp:DropDownList>
                         <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn bottone " OnClick="AddCart_Click" />
                     </div>
                 </div>
