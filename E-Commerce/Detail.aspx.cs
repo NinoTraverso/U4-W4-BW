@@ -20,6 +20,7 @@ namespace E_Commerce
             noReviewsMessage.Visible = false;
             if (Request.Cookies[".ASPXAUTH"] == null)
             {
+                language.Visible = false;
                 AddCart.Text = "Effettua il Login per acquistare";
                 commentContainer.Visible = false;
                 commentMessage.Visible = true;
@@ -28,6 +29,7 @@ namespace E_Commerce
             {
                 commentContainer.Visible = true;
                 commentMessage.Visible = false;
+                language.Visible = true;
                 AddCart.Text = "Metti nel Carrello";
                 string username = HttpContext.Current.User.Identity.Name;
                 id = Convert.ToInt32(Request.QueryString["idFilm"]);
