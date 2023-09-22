@@ -35,13 +35,13 @@
                             <asp:ImageButton ID="Image3" runat="server" OnClientClick="return false;" CssClass="w-25" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo" />
                         </div>
                     </div>
-                    <div class="card-footer text-body-secondary text-center py-5">
-                        <asp:DropDownList ID="language" runat="server">
-                            <asp:ListItem Value="Italiano" Text="Italiano"></asp:ListItem> 
-                            <asp:ListItem Value="English" Text="English"></asp:ListItem> 
-                            <asp:ListItem Value="German" Text="German"></asp:ListItem> 
-                            <asp:ListItem Value="Spanish" Text="Spanish"></asp:ListItem> 
-                            <asp:ListItem Value="French" Text="French"></asp:ListItem> 
+                    <div class="card-footer text-body-secondary text-center py-5 d-flex justify-content-center gap-4">
+                        <asp:DropDownList ID="language" runat="server" CssClass="glass text-light">
+                            <asp:ListItem Value="Italiano" Text="Italiano" CssClass="glass text-light"></asp:ListItem> 
+                            <asp:ListItem Value="English" Text="English" CssClass="glass text-light"></asp:ListItem> 
+                            <asp:ListItem Value="German" Text="German" CssClass="glass text-light"></asp:ListItem> 
+                            <asp:ListItem Value="Spanish" Text="Spanish" CssClass="glass text-light"></asp:ListItem> 
+                            <asp:ListItem Value="French" Text="French" CssClass="glass text-light"></asp:ListItem> 
                         </asp:DropDownList>
                         <asp:Button ID="AddCart" runat="server" Text="Metti nel carrello" CssClass="btn bottone " OnClick="AddCart_Click" />
                     </div>
